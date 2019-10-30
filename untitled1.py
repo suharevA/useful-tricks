@@ -11,7 +11,7 @@ import subprocess
 threshold = 20
 partition = '/'
 
-
+# поверьте название раздела df -h
 result = subprocess.Popen(['df', '-h', '/dev/sda1'], stdout=subprocess.PIPE, encoding='utf-8')
 
 for line in result.stdout:
