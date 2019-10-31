@@ -19,11 +19,8 @@ for line in result.stdout:
    if splitline[-1] == partition:
        if int(splitline[-2][:-1]) > threshold:
            ''' Меняем на другую комманду
-           
-           например
-           
+           например на
            docker_prune = subprocess.run('docker system prune -f', shell=True)
-           
            '''
            
            docker_prune = subprocess.run('df -h', shell=True)
