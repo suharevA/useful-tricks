@@ -4,3 +4,4 @@ untitled1.py -- Python Script to monitor disk space (Читай коммента
 crontab -e 
 */10 * * * * /opt/untitled1.py каждые 10 минут
 
+untitled12_bucardo.py
