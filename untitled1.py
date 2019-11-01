@@ -23,7 +23,9 @@ for line in result.stdout:
            docker_prune = subprocess.run('docker system prune -f', shell=True)
            '''
            
-           docker_prune = subprocess.run('df -h', shell=True)
+           docker_prune = subprocess.run('docker system prune -f', shell=True)
+         
+           print('Complete')
                
    
 
