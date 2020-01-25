@@ -1,4 +1,4 @@
-# Script_python 
+# Script_python and Script Bash
 
 untitled1.py -- Python Script to monitor disk space и запуска команды очистки docker image (Читай комментарии в файле)
 crontab -e 
