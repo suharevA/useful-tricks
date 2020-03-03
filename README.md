@@ -9,3 +9,4 @@ Bucardo Multimaster и Master / Slave Postgres репликации.
 start command: python2.7 untitled2_bucardo.py host.bucardo2 /bucardo_replication_log.txt
 Скрипт добавляем в автозагрузку
 
+back_postgres -- Скрипт для резервного копирования баз данных Postgres 
