@@ -1,31 +1,22 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Oct 30 09:31:43 2019
-
-@author: suharevA
-Python Script to monitor disk space
-"""
 import subprocess
 
-threshold = 20
-partition = '/'
+partition = "/"
+threshold = 80
 
-# поверьте название раздела df -h
-result = subprocess.Popen(['df', '-h', '/dev/sda1'], stdout=subprocess.PIPE, encoding='utf-8')
+df = subprocess.Popen(["df", '-h'], stdout=subprocess.PIPE, encoding='utf-8')  # look at the drive, I have /dev/sda
 
-for line in result.stdout:
-   splitline = line.split()
-   if splitline[-1] == partition:
-       if int(splitline[-2][:-1]) > threshold:
-           ''' Меняем на другую комманду
-           например на
-           docker_prune = subprocess.run('docker system prune -f', shell=True)
-           '''
-           
-           docker_prune = subprocess.run('docker system prune -f', shell=True)
-         
-           print('Complete')
+
+def check_disk():
+    for line in df.stdout:
+        splittings = line.split()
+        if splittings[5] == partition:  # contact by number and make a cut
+            if int(splittings[4][:-1]) > threshold:  # contact by number and make a cut
+                result = subprocess.run(["docker system prune -f"])  # you can add any command
+                print('complete docker prune')
+
+
+check_disk()
+
                
    
 
