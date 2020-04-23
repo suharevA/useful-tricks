@@ -12,7 +12,7 @@ def check_disk():
         if splittings[5] == partition:  # contact by number and make a cut
             if int(splittings[4][:-1]) > threshold:  # contact by number and make a cut
                 result = subprocess.run(["docker system prune -f"])  # you can add any command
-                print('complete docker prune')
+                print('complete cleane...')
 
 
 check_disk()
