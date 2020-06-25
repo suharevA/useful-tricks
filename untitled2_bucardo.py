@@ -27,15 +27,6 @@ def check_ping(hostname):
         else:
             return False
 
-    # with open(os.devnull, 'w') as DEVNULL:
-    #     try:
-    #         subprocess.check_call("ping -c 1 " + ping_destinations[hostname], shell=True, stdout=DEVNULL)
-    #         file_.write("\n" + date + " PING to " + ping_destinations[hostname] + " is OK.")
-    #         file_.flush()
-    #         return True
-    #     except subprocess.CalledProcessError:
-    #         return False
-
 
 # Returns formatted date string
 def getdate():
