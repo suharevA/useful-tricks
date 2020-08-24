@@ -1,6 +1,6 @@
 ## Description 
 
-1. **untitled1.py** -- Python Script to monitor disk space и запуска команды очистки docker image (Читай комментарии в файле)
+1. **check_disk_space.py** -- Python Script to monitor disk space и запуска команды очистки docker image (Читай комментарии в файле)
 crontab -e 
 */10 * * * * /opt/check_disk_space.py каждые 10 минут
 
