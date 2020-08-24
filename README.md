@@ -1,5 +1,9 @@
 ## Description 
 
+1. **moni_disk_space.sh** -- Python Script to monitor disk space и запуска команды очистки docker image (Читай комментарии в файле)
+crontab -e 
+*/10 * * * * /opt/moni_disk_space.sh каждые 10 минут
+
 1. **moni_disk_space.py** -- Python Script to monitor disk space и запуска команды очистки docker image (Читай комментарии в файле)
 crontab -e 
 */10 * * * * /opt/moni_disk_space.py каждые 10 минут
