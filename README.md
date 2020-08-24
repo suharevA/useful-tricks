@@ -2,7 +2,7 @@
 
 1. **untitled1.py** -- Python Script to monitor disk space и запуска команды очистки docker image (Читай комментарии в файле)
 crontab -e 
-*/10 * * * * /opt/untitled1.py каждые 10 минут
+*/10 * * * * /opt/check_disk_space.py каждые 10 минут
 
 1. **untitled12_bucardo.py** -- Скрипт решает проблему (Bucardo не может автоматически синхронизировать потерянные узлы) скрипт для отслеживания состояния сервера. Как только соединение возобновляется, скрипт выполняет команду перезагрузки bucardo. Синхронизация восстановлена.
 Bucardo Multimaster и Master / Slave Postgres репликации.
