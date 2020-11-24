@@ -18,4 +18,4 @@ start script: python2.7 untitled12_bucardo.py host.bucardo2 /bucardo_replication
 1. **enum.py** -- сканирует папку, пишет сожержиое и размер найденого в файл enum.txt 
 
 1. **pars.py** -- читает файлы в папке и собирает все данные в один файл txt 
-./pars.py путь к папке
+  запуск ./pars.py путь к папке
