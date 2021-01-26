@@ -1,0 +1,44 @@
+# Lists
+
+"""
+Remove Duplicates from Sorted Array
+
+Solution
+
+"""
+nums = [0,0,1,1,1,2,2,3,3,4]
+nums[:] = list(set(nums))
+nums.sort()
+print(len(nums))
+
+
+def removeDuplicates(self, nums: List[int]) -> int:
+    '''Учитывая отсортированный массив nums , удалите дубликаты на месте , чтобы каждый элемент появлялся только один раз и возвращал новую длину'''
+
+
+for i in range(len(nums) - 1, 0, -1):
+    if nums[i] == nums[i - 1]:
+        del nums[i]
+# или так
+nums[:] = list(set(nums))
+nums.sort()
+print(len(nums))
+
+
+def rotate(self, nums, k):
+    """Для данного массива поверните массив вправо на k шагов, где  k  неотрицательно."""
+
+
+k %= len(nums)
+nums[:] = (nums[-k:] + nums[:-k]
+return nums
+
+
+def containsDuplicate(self, nums: List[int]) -> bool:
+    """Учитывая массив целых чисел, выясните, содержит ли массив дубликаты."""
+    set_nums = set(nums)
+    if len(nums) == len(set_nums):
+        return False
+    return True
+    
+    
