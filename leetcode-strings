@@ -1,0 +1,6 @@
+def missing_char(str, n):
+  '''строку и int n, верните новую строку, в которой символ в индексе n был удален.
+      missing_char('kitten', 1) → 'ktten' missing_char('kitten', 0) → 'itten'
+  '''
+  new_str = str[0:n] + str[n+1:]
+  return new_str
