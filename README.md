@@ -21,5 +21,6 @@ start script: python2.7 untitled12_bucardo.py host.bucardo2 /bucardo_replication
   запуск ./pars.py путь к папке
   
 1. **backup_folder.sh** -- Резервная копия и архивирование папки запуск crontab @midnight bash /home/you folder/backup_folder.sh /home/dev/что бекапим/ /home/куда/backup
- 
+
+1. **autowebproxy.py** -- Веб-прокси позволяет вам просматривать веб-страницы анонимно и разблокировать ваши любимые веб-сайты без установки какого-либо программного обеспечения, такого как VPN
 
