@@ -24,3 +24,4 @@ start script: python2.7 untitled12_bucardo.py host.bucardo2 /bucardo_replication
 
 1. **autowebproxy.py** -- Веб-прокси позволяет вам просматривать веб-страницы анонимно и разблокировать ваши любимые веб-сайты без установки какого-либо программного обеспечения, такого как VPN
 
+1. **mypass_genpass.py** -- Как использовать API Google Диска в Python. Генерирует пароль, сохраняет в файл, отправляет на Google диск
