@@ -1,4 +1,4 @@
-
+ - [lvm](https://docs.livekit.io/guides/room/receive/#speaker-detection)
 
 1. **moni_disk_space.sh** -- Script to monitor disk space и запуска команды очистки docker image (Читай комментарии в файле)
 crontab -e 
