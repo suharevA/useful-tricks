@@ -2,6 +2,7 @@
  - [lvm](https://github.com/suharevA/my/blob/main/lvm)
  - [graylog](https://github.com/suharevA/my/blob/main/graylog)
  - [curl](https://github.com/suharevA/my/blob/main/curl)
+ - [ssh](https://github.com/suharevA/my/blob/main/ssh)
 
 ## Scripts
 1. **moni_disk_space.sh** -- Script to monitor disk space и запуска команды очистки docker image (Читай комментарии в файле)
