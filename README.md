@@ -2,7 +2,7 @@
  - [lvm](https://github.com/suharevA/my/blob/main/lvm)
  - [graylog](https://github.com/suharevA/my/blob/main/graylog)
  - [curl](https://github.com/suharevA/my/blob/main/curl)
- - [ssh](https://github.com/suharevA/my/blob/main/ssh) [
+ - [ssh](https://github.com/suharevA/my/blob/main/ssh) 
  - [docker](https://github.com/suharevA/my/blob/main/Dockerfile)
 
 ## Scripts
