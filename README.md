@@ -32,3 +32,4 @@ start script: python2.7 untitled12_bucardo.py host.bucardo2 /bucardo_replication
 
 1. **mypass_genpass.py** -- Как использовать API Google Диска в Python. Генерирует пароль, сохраняет в файл, отправляет на Google диск
 1. **check-ssl.py** -- Обалденный скрипт для проверки сертификата
+1. **searching_yml.py** -- поиск файла по имени, во всех папках
