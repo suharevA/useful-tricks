@@ -4,6 +4,8 @@
  - [curl](https://github.com/suharevA/my/blob/main/curl)
  - [ssh](https://github.com/suharevA/my/blob/main/ssh) 
  - [docker](https://github.com/suharevA/my/blob/main/Dockerfile)
+ - [reset root](https://github.com/suharevA/my/blob/main/resetroot)
+ - [find](https://github.com/suharevA/my/blob/main/find)
 
 
 
