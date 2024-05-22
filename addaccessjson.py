@@ -6,15 +6,21 @@ class MyDumper(yaml.Dumper):
     def increase_indent(self, flow=False, indentless=False):
         return super(MyDumper, self).increase_indent(flow, False)
 
-path = 'backup/production_sites'
+def decode_unicode_string(s):
+    """Decodes a string or dictionary containing Unicode escape sequences."""
+    if isinstance(s, str):
+        return s.encode().decode('utf-8')
+    elif isinstance(s, dict):
+        return {k: decode_unicode_string(v) for k, v in s.items()}
+    else:
+        return s
 
-config = """
-*.temocenter.ru_9443.yml
 
-"""
+path = 'backup'
+
 
 for filename in os.listdir(path):
-    if filename in config:
+    if filename.endswith('.yml'):
         with open(os.path.join(path, filename), 'r') as file:
             try:
                 data = yaml.safe_load(file)
@@ -23,9 +29,10 @@ for filename in os.listdir(path):
                     continue
 
                 for key in data:
-                    print(f"Key: {key}")
                     updated_elements = []
                     for index, element in enumerate(data[key]):
+                        # Decode Unicode escape sequences in the element
+                        element = decode_unicode_string(element)
                         updated_elements.append(element)
                         # Check if the element contains 'access_log'
                         if 'access_log' in element:
@@ -33,15 +40,18 @@ for filename in os.listdir(path):
                             log_name = os.path.basename(element).split(' ')[0].rstrip('.json')
                             # Construct the new element string without appending .json
                             new_element = f"access_log /var/log/nginx/{log_name}.json extend_json"
-                            # Insert the new element right after the current element
-                            updated_elements.insert(index + 1, new_element)
-                            print(f"Inserted new element after current 'access_log': '{new_element}'")
+                            # Check if the new element is already in the list
+                            if new_element not in updated_elements:
+                                # Insert the new element right after the current element
+                                updated_elements.insert(index + 1, new_element)
                     # Update the data with the new list of elements
                     data[key] = updated_elements
 
                 # Write the updated data back to the file
                 with open(os.path.join(path, filename), 'w') as file:
-                    yaml.dump(data, file, Dumper=MyDumper, default_flow_style=False)
+                    decode_data = decode_unicode_string(data)
+                    yaml.dump(decode_data, file, Dumper=MyDumper, default_flow_style=False, allow_unicode=True)
+
 
             except yaml.YAMLError as exc:
                 print(f"Error parsing the file '{filename}': {exc}")
