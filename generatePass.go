@@ -7,7 +7,7 @@ import (
 )
 
 func generatePassword(length int) string {
-	rand.Seed(time.Now().UnixNano())
+	rand.New(rand.NewSource(time.Now().UnixNano()))
 
 	charset := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+{}:<>?|"
 
@@ -17,10 +17,4 @@ func generatePassword(length int) string {
 	}
 
 	return string(password)
-}
-
-func main() {
-	passwordLength := 16
-	password := generatePassword(passwordLength)
-	fmt.Println("Generated Password:", password)
 }
