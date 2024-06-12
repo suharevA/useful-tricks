@@ -14,6 +14,8 @@
 1. **lvm** работа с дисками 
 
 ## Scripts
+1. **[generatePass.go](generatePass.go)** -- генератор паролей
+
 1. **moni_disk_space.sh** -- мониторинг диска, запуск команды очистки например (docker image rm)  (Читай комментарии в файле)
 crontab -e 
 */10 * * * * /opt/moni_disk_space.sh каждые 10 минут
