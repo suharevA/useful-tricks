@@ -18,3 +18,9 @@ func generatePassword(length int) string {
 
 	return string(password)
 }
+
+func main() {
+	passwordLength := 16
+	password := generatePassword(passwordLength)
+	fmt.Println("Generated Password:", password)
+}
