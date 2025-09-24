@@ -11,7 +11,6 @@
 
 ## Linux
 1. **vg_resize.py** -- автоматическое расширение файловой системы
-1. **lvm** работа с дисками 
 [resizeVG_v2.py](automation/resizeVG_v2.py)
 2. **resizeroot.py** -- автоматическое расширение корневого раздела
 ## Scripts
