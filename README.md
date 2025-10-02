@@ -75,5 +75,5 @@
 | Проект/Скрипт                           | Описание                     | Файл/Ссылка             |
 |-----------------------------------------|------------------------------|-------------------------|
 | Health Check (HTTP/HTTPS) для openresty | *(Описание)* | [healthcheck_init.lua](lua/healthcheck_init.lua)*(Ссылка)* |
-| Health Check (TCP) для openresty        | *(Описание)* | [healthcheck_init.lua]([tcp-nginx.lua](lua/tcp-nginx.lua) |
+| Health Check (TCP) для openresty        | *(Описание)* | ([tcp-nginx.lua](lua/tcp-nginx.lua) |
 ---
