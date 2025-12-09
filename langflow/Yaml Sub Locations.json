@@ -1,0 +1,1451 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "UniversalSearchConfigComponent",
+            "id": "UniversalSearchConfigComponent-u7ief",
+            "name": "config_data",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "universal_search_result",
+            "id": "LocationSelectorFromUniversalSearch-8dtdG",
+            "inputTypes": [
+              "Data",
+              "dict"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__UniversalSearchConfigComponent-u7ief{œdataTypeœ:œUniversalSearchConfigComponentœ,œidœ:œUniversalSearchConfigComponent-u7iefœ,œnameœ:œconfig_dataœ,œoutput_typesœ:[œDataœ]}-LocationSelectorFromUniversalSearch-8dtdG{œfieldNameœ:œuniversal_search_resultœ,œidœ:œLocationSelectorFromUniversalSearch-8dtdGœ,œinputTypesœ:[œDataœ,œdictœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "UniversalSearchConfigComponent-u7ief",
+        "sourceHandle": "{œdataTypeœ:œUniversalSearchConfigComponentœ,œidœ:œUniversalSearchConfigComponent-u7iefœ,œnameœ:œconfig_dataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "LocationSelectorFromUniversalSearch-8dtdG",
+        "targetHandle": "{œfieldNameœ:œuniversal_search_resultœ,œidœ:œLocationSelectorFromUniversalSearch-8dtdGœ,œinputTypesœ:[œDataœ,œdictœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "UniversalSearchConfigComponent",
+            "id": "UniversalSearchConfigComponent-u7ief",
+            "name": "config_data",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_data",
+            "id": "ParserComponent-6T9YF",
+            "inputTypes": [
+              "DataFrame",
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__UniversalSearchConfigComponent-u7ief{œdataTypeœ:œUniversalSearchConfigComponentœ,œidœ:œUniversalSearchConfigComponent-u7iefœ,œnameœ:œconfig_dataœ,œoutput_typesœ:[œDataœ]}-ParserComponent-6T9YF{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-6T9YFœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "UniversalSearchConfigComponent-u7ief",
+        "sourceHandle": "{œdataTypeœ:œUniversalSearchConfigComponentœ,œidœ:œUniversalSearchConfigComponent-u7iefœ,œnameœ:œconfig_dataœ,œoutput_typesœ:[œDataœ]}",
+        "target": "ParserComponent-6T9YF",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-6T9YFœ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ConditionalRouter",
+            "id": "ConditionalRouter-9f2ws",
+            "name": "false_result",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "selected_block",
+            "id": "ConfigBlockSplitter-gNsct",
+            "inputTypes": [
+              "Message",
+              "Data",
+              "dict"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__ConditionalRouter-9f2ws{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-9f2wsœ,œnameœ:œfalse_resultœ,œoutput_typesœ:[œMessageœ]}-ConfigBlockSplitter-gNsct{œfieldNameœ:œselected_blockœ,œidœ:œConfigBlockSplitter-gNsctœ,œinputTypesœ:[œMessageœ,œDataœ,œdictœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "ConditionalRouter-9f2ws",
+        "sourceHandle": "{œdataTypeœ:œConditionalRouterœ,œidœ:œConditionalRouter-9f2wsœ,œnameœ:œfalse_resultœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ConfigBlockSplitter-gNsct",
+        "targetHandle": "{œfieldNameœ:œselected_blockœ,œidœ:œConfigBlockSplitter-gNsctœ,œinputTypesœ:[œMessageœ,œDataœ,œdictœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "LocationSelectorFromUniversalSearch",
+            "id": "LocationSelectorFromUniversalSearch-8dtdG",
+            "name": "selected_block",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_text",
+            "id": "ConditionalRouter-9f2ws",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__LocationSelectorFromUniversalSearch-8dtdG{œdataTypeœ:œLocationSelectorFromUniversalSearchœ,œidœ:œLocationSelectorFromUniversalSearch-8dtdGœ,œnameœ:œselected_blockœ,œoutput_typesœ:[œMessageœ]}-ConditionalRouter-9f2ws{œfieldNameœ:œinput_textœ,œidœ:œConditionalRouter-9f2wsœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "LocationSelectorFromUniversalSearch-8dtdG",
+        "sourceHandle": "{œdataTypeœ:œLocationSelectorFromUniversalSearchœ,œidœ:œLocationSelectorFromUniversalSearch-8dtdGœ,œnameœ:œselected_blockœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ConditionalRouter-9f2ws",
+        "targetHandle": "{œfieldNameœ:œinput_textœ,œidœ:œConditionalRouter-9f2wsœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "LocationSelectorFromUniversalSearch",
+            "id": "LocationSelectorFromUniversalSearch-8dtdG",
+            "name": "selected_block",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "false_case_message",
+            "id": "ConditionalRouter-9f2ws",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__LocationSelectorFromUniversalSearch-8dtdG{œdataTypeœ:œLocationSelectorFromUniversalSearchœ,œidœ:œLocationSelectorFromUniversalSearch-8dtdGœ,œnameœ:œselected_blockœ,œoutput_typesœ:[œMessageœ]}-ConditionalRouter-9f2ws{œfieldNameœ:œfalse_case_messageœ,œidœ:œConditionalRouter-9f2wsœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "LocationSelectorFromUniversalSearch-8dtdG",
+        "sourceHandle": "{œdataTypeœ:œLocationSelectorFromUniversalSearchœ,œidœ:œLocationSelectorFromUniversalSearch-8dtdGœ,œnameœ:œselected_blockœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ConditionalRouter-9f2ws",
+        "targetHandle": "{œfieldNameœ:œfalse_case_messageœ,œidœ:œConditionalRouter-9f2wsœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ParserComponent",
+            "id": "ParserComponent-6T9YF",
+            "name": "parsed_text",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "ChatOutput-crLPm",
+            "inputTypes": [
+              "Data",
+              "DataFrame",
+              "Message"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__ParserComponent-6T9YF{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-6T9YFœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-crLPm{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-crLPmœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "ParserComponent-6T9YF",
+        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-6T9YFœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ChatOutput-crLPm",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-crLPmœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "TextInput",
+            "id": "TextInput-ob9bg",
+            "name": "text",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "agent1_json",
+            "id": "UniversalSearchConfigComponent-u7ief",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__TextInput-ob9bg{œdataTypeœ:œTextInputœ,œidœ:œTextInput-ob9bgœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-UniversalSearchConfigComponent-u7ief{œfieldNameœ:œagent1_jsonœ,œidœ:œUniversalSearchConfigComponent-u7iefœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "TextInput-ob9bg",
+        "sourceHandle": "{œdataTypeœ:œTextInputœ,œidœ:œTextInput-ob9bgœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "UniversalSearchConfigComponent-u7ief",
+        "targetHandle": "{œfieldNameœ:œagent1_jsonœ,œidœ:œUniversalSearchConfigComponent-u7iefœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "id": "LocationSelectorFromUniversalSearch-8dtdG",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Selects locations from universal search result for LLM processing (supports 1 or N locations)",
+            "display_name": "Location Selector from Universal Search",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "universal_search_result",
+              "source_field"
+            ],
+            "frozen": false,
+            "icon": "filter",
+            "legacy": false,
+            "lf_version": "1.6.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "selected_block",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_selected_block",
+                "name": "selected_block",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "operation_context",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_operation_context",
+                "name": "operation_context",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "error_message",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_error_message",
+                "name": "error_message",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom.custom_component.component import Component\nfrom langflow.inputs.inputs import (\n    HandleInput,\n    MessageTextInput,\n)\nfrom langflow.schema.data import Data\nfrom langflow.schema.message import Message\nfrom langflow.template.field.base import Output\nimport json\nimport hashlib\nimport yaml\nimport re\nfrom typing import Dict, Any, List, Optional, Tuple\n\n\nclass LocationSelectorFromUniversalSearch(Component):\n    \"\"\"\n    Selects a specific location or server block from universal search result.\n    Automatically extracts target location from agent1_data.location.\n    Processes ALL matching configurations from all_configs.\n    Special handling for operations:\n    - CREATE_LOCATION: Returns config info where location DOESN'T exist (to create new)\n    - DELETE_LOCATION: Returns config info where location DOES exist (to delete)\n    - MODIFY_LOCATION_PATH: Returns config info where OLD location exists (to rename/move)\n    - MODIFY/ADD: Returns config info where location exists (to modify)\n    - MAKE_PROTECTED: Returns config info where location exists (to make protected)\n    - MAKE_PUBLIC: Returns config info where location exists (to make public)\n    - Server operations: Always returns server block info\n    NEW: Handles both single location and multiple locations seamlessly!\n    NEW: Supports parameters, location_parameters, server_block_parameters\n    NEW: Supports multi-DC detection (found_in_multiple_dc, domain_dc_mapping, etc.)\n    \"\"\"\n    display_name = \"Location Selector from Universal Search\"\n    description = \"Selects locations from universal search result for LLM processing (supports 1 or N locations)\"\n    documentation = \"\"\n    icon = \"filter\"\n    inputs = [\n        HandleInput(\n            name=\"universal_search_result\",\n            display_name=\"Universal Search Result\",\n            input_types=[\"Data\", \"dict\"],\n            info=\"Output from Universal Search (contains agent1_data)\",\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"source_field\",\n            display_name=\"Source field\",\n            value=\"full_config_text\",\n            info=\"Field containing YAML config text (full_config_text or config_block)\",\n            required=True,\n        ),\n    ]\n    outputs = [\n        Output(\n            display_name=\"selected_block\",\n            name=\"selected_block\",\n            info=\"Selected location/server blocks for all matching configs\",\n            method=\"build_selected_block\",\n        ),\n        Output(\n            display_name=\"operation_context\",\n            name=\"operation_context\",\n            info=\"Operation metadata from agent1_data\",\n            method=\"build_operation_context\",\n        ),\n        Output(\n            display_name=\"error_message\",\n            name=\"error_message\",\n            info=\"Error if location not found\",\n            method=\"build_error_message\",\n        ),\n    ]\n\n    def _get_search_result(self) -> Dict[str, Any]:\n        \"\"\"Extract universal search result.\"\"\"\n        input_data = self.universal_search_result\n        if isinstance(input_data, Data):\n            data = input_data.data\n        elif isinstance(input_data, dict):\n            data = input_data\n        else:\n            data = json.loads(str(input_data))\n        return data\n\n    def _extract_multi_dc_info(self, search_result: Dict[str, Any]) -> Dict[str, Any]:\n        \"\"\"\n        🆕 Extract multi-DC information from search result.\n        Returns dict with all multi-DC related fields.\n        \"\"\"\n        return {\n            \"found_in_multiple_dc\": search_result.get(\"found_in_multiple_dc\", False),\n            \"dc_count\": search_result.get(\"dc_count\", 0),\n            \"unique_dcs\": search_result.get(\"unique_dcs\", []),\n            \"domain_dc_mapping\": search_result.get(\"domain_dc_mapping\", {}),\n            \"domains_in_multiple_dc\": search_result.get(\"domains_in_multiple_dc\", []),\n        }\n\n    def _get_agent1_data(self, search_result: Dict[str, Any]) -> Dict[str, Any]:\n        \"\"\"\n        Extract and normalize agent1_data from search result.\n        Handles ALL possible structures:\n        - agent1_data as list\n        - agent1_data as dict with 'payload'\n        - agent1_data as dict without 'payload'\n        - Multiple domains vs single domain\n        - Merges data from multiple payload items\n        \"\"\"\n        agent1_data_raw = search_result.get(\"agent1_data\", {})\n\n        # CASE 1: agent1_data is a list - take first element\n        if isinstance(agent1_data_raw, list):\n            if not agent1_data_raw:\n                return {}\n            first_item = agent1_data_raw[0]\n            # Check if this item also has payload\n            if isinstance(first_item, dict) and \"payload\" in first_item:\n                return self._extract_from_payload(first_item.get(\"payload\", []))\n            return first_item\n\n        # CASE 2: agent1_data is dict\n        if isinstance(agent1_data_raw, dict):\n            # Check if it has 'payload' key\n            if \"payload\" in agent1_data_raw:\n                payload = agent1_data_raw.get(\"payload\", [])\n                return self._extract_from_payload(payload)\n\n            # CASE 3: Direct dict without payload - return as is\n            return agent1_data_raw\n\n        return {}\n\n    def _extract_from_payload(self, payload: List[Dict]) -> Dict[str, Any]:\n        \"\"\"\n        Extract and merge data from payload array.\n        Handles both single and multiple items in payload.\n        \"\"\"\n        if not payload or not isinstance(payload, list):\n            return {}\n\n        # If single item - return it directly\n        if len(payload) == 1:\n            return payload[0]\n\n        # Multiple items - merge them intelligently\n        merged = {\n            \"operation\": None,\n            \"domain\": None,\n            \"domains\": [],\n            \"location\": None,\n            \"locations\": [],\n            \"from_location\": None,\n            \"to_location\": None,\n            \"new_location_path\": None,\n            \"preserve_directives\": True,\n            \"parameters\": [],\n            \"location_parameters\": [],\n            \"server_block_parameters\": [],\n            \"ip_addresses\": [],\n            \"upstreams\": [],\n            \"kms_required\": False,\n            \"kms_mentioned\": False,\n            \"kms_locations\": [],\n            \"public_locations\": [],\n            \"selected_dc\": [],\n            \"data_complete\": True,\n            \"confidence\": 0.0,\n            \"warnings\": [],\n            \"ambiguities\": []\n        }\n\n        for item in payload:\n            if not isinstance(item, dict):\n                continue\n\n            # Operation - take from first item\n            if not merged[\"operation\"] and item.get(\"operation\"):\n                merged[\"operation\"] = item[\"operation\"]\n\n            # Domains - collect all\n            if item.get(\"domain\"):\n                merged[\"domains\"].append(item[\"domain\"])\n                if not merged[\"domain\"]:  # Set first domain as primary\n                    merged[\"domain\"] = item[\"domain\"]\n\n            if item.get(\"domains\"):\n                if isinstance(item[\"domains\"], list):\n                    merged[\"domains\"].extend(item[\"domains\"])\n                else:\n                    merged[\"domains\"].append(item[\"domains\"])\n\n            # Locations - collect all\n            if item.get(\"location\"):\n                merged[\"locations\"].append(item[\"location\"])\n                if not merged[\"location\"]:  # Set first location as primary\n                    merged[\"location\"] = item[\"location\"]\n\n            if item.get(\"locations\"):\n                if isinstance(item[\"locations\"], list):\n                    merged[\"locations\"].extend(item[\"locations\"])\n                else:\n                    merged[\"locations\"].append(item[\"locations\"])\n\n            # Location parameters - collect all\n            if item.get(\"location_parameters\"):\n                if isinstance(item[\"location_parameters\"], list):\n                    merged[\"location_parameters\"].extend(item[\"location_parameters\"])\n                else:\n                    merged[\"location_parameters\"].append(item[\"location_parameters\"])\n\n            # Server block parameters - collect all (deduplicate later)\n            if item.get(\"server_block_parameters\"):\n                if isinstance(item[\"server_block_parameters\"], list):\n                    merged[\"server_block_parameters\"].extend(item[\"server_block_parameters\"])\n                else:\n                    merged[\"server_block_parameters\"].append(item[\"server_block_parameters\"])\n\n            # General parameters - collect all\n            if item.get(\"parameters\"):\n                if isinstance(item[\"parameters\"], list):\n                    merged[\"parameters\"].extend(item[\"parameters\"])\n                else:\n                    merged[\"parameters\"].append(item[\"parameters\"])\n\n            # IP addresses - collect all\n            if item.get(\"ip_addresses\"):\n                if isinstance(item[\"ip_addresses\"], list):\n                    merged[\"ip_addresses\"].extend(item[\"ip_addresses\"])\n                else:\n                    merged[\"ip_addresses\"].append(item[\"ip_addresses\"])\n\n            # Upstreams - collect all\n            if item.get(\"upstreams\"):\n                if isinstance(item[\"upstreams\"], list):\n                    merged[\"upstreams\"].extend(item[\"upstreams\"])\n                elif item[\"upstreams\"]:  # Not None\n                    merged[\"upstreams\"].append(item[\"upstreams\"])\n\n            # Selected DC - collect all\n            if item.get(\"selected_dc\"):\n                if isinstance(item[\"selected_dc\"], list):\n                    merged[\"selected_dc\"].extend(item[\"selected_dc\"])\n                else:\n                    merged[\"selected_dc\"].append(item[\"selected_dc\"])\n\n            # KMS locations - collect all\n            if item.get(\"kms_locations\"):\n                if isinstance(item[\"kms_locations\"], list):\n                    merged[\"kms_locations\"].extend(item[\"kms_locations\"])\n                else:\n                    merged[\"kms_locations\"].append(item[\"kms_locations\"])\n\n            # Public locations - collect all\n            if item.get(\"public_locations\"):\n                if isinstance(item[\"public_locations\"], list):\n                    merged[\"public_locations\"].extend(item[\"public_locations\"])\n                else:\n                    merged[\"public_locations\"].append(item[\"public_locations\"])\n\n            # Boolean flags - OR logic (if any item has True, result is True)\n            if item.get(\"kms_required\"):\n                merged[\"kms_required\"] = True\n\n            if item.get(\"kms_mentioned\"):\n                merged[\"kms_mentioned\"] = True\n\n            # Preserve directives - AND logic (all must be True)\n            if item.get(\"preserve_directives\") is False:\n                merged[\"preserve_directives\"] = False\n\n            # Path modification fields - take from first non-empty\n            if not merged[\"from_location\"] and item.get(\"from_location\"):\n                merged[\"from_location\"] = item[\"from_location\"]\n\n            if not merged[\"to_location\"] and item.get(\"to_location\"):\n                merged[\"to_location\"] = item[\"to_location\"]\n\n            if not merged[\"new_location_path\"] and item.get(\"new_location_path\"):\n                merged[\"new_location_path\"] = item[\"new_location_path\"]\n\n            # Data completeness - AND logic\n            if item.get(\"data_complete\") is False:\n                merged[\"data_complete\"] = False\n\n            # Confidence - take maximum\n            item_confidence = item.get(\"confidence\", 0.0)\n            if item_confidence > merged[\"confidence\"]:\n                merged[\"confidence\"] = item_confidence\n\n            # Warnings and ambiguities - collect all\n            if item.get(\"warnings\"):\n                if isinstance(item[\"warnings\"], list):\n                    merged[\"warnings\"].extend(item[\"warnings\"])\n                else:\n                    merged[\"warnings\"].append(item[\"warnings\"])\n\n            if item.get(\"ambiguities\"):\n                if isinstance(item[\"ambiguities\"], list):\n                    merged[\"ambiguities\"].extend(item[\"ambiguities\"])\n                else:\n                    merged[\"ambiguities\"].append(item[\"ambiguities\"])\n\n        # Deduplicate lists\n        merged[\"domains\"] = list(dict.fromkeys(merged[\"domains\"]))  # Preserve order\n        merged[\"locations\"] = list(dict.fromkeys(merged[\"locations\"]))\n        merged[\"server_block_parameters\"] = list(dict.fromkeys(merged[\"server_block_parameters\"]))\n        merged[\"parameters\"] = list(dict.fromkeys(merged[\"parameters\"]))\n        merged[\"ip_addresses\"] = list(dict.fromkeys(merged[\"ip_addresses\"]))\n        merged[\"selected_dc\"] = list(dict.fromkeys(merged[\"selected_dc\"]))\n        merged[\"kms_locations\"] = list(dict.fromkeys(merged[\"kms_locations\"]))\n        merged[\"public_locations\"] = list(dict.fromkeys(merged[\"public_locations\"]))\n\n        # Clean up empty lists to None where appropriate\n        if not merged[\"domains\"]:\n            merged[\"domains\"] = []\n        if not merged[\"locations\"]:\n            merged[\"locations\"] = []\n        if not merged[\"upstreams\"]:\n            merged[\"upstreams\"] = []\n\n        return merged\n\n    def _normalize_location_parameters(self, agent1_data: Dict[str, Any]) -> List[Dict]:\n        \"\"\"\n        Normalize location_parameters regardless of input format.\n        Handles: single location, multiple locations, location_parameters array.\n        Returns list of dicts, each with: location, parameters, kms_required, ip_addresses, upstreams, new_location_path\n        \"\"\"\n        location_parameters = agent1_data.get(\"location_parameters\", [])\n        locations_list = agent1_data.get(\"locations\", [])\n        single_location = agent1_data.get(\"location\")\n        ip_addresses = agent1_data.get(\"ip_addresses\", [])\n        upstreams = agent1_data.get(\"upstreams\", [])\n        parameters = agent1_data.get(\"parameters\", [])\n        kms_required = agent1_data.get(\"kms_required\", False)\n        server_block_parameters = agent1_data.get(\"server_block_parameters\", [])\n        selected_dc = agent1_data.get(\"selected_dc\", [])\n        # NEW: Support both naming conventions for path modification\n        new_location_path = agent1_data.get(\"new_location_path\") or agent1_data.get(\"to_location\")\n        from_location = agent1_data.get(\"from_location\")\n        # If from_location is specified, use it as the primary location\n        if from_location:\n            single_location = from_location\n        # CASE 1: location_parameters уже заполнена (приоритет)\n        if location_parameters and isinstance(location_parameters, list):\n            normalized = []\n            for loc_param in location_parameters:\n                if isinstance(loc_param, dict) and loc_param.get(\"location\"):\n                    # Support both naming conventions\n                    param_new_path = (loc_param.get(\"new_location_path\") or\n                                      loc_param.get(\"to_location\") or\n                                      new_location_path)\n                    norm_param = {\n                        \"location\": loc_param.get(\"location\") or loc_param.get(\"from_location\"),\n                        \"parameters\": loc_param.get(\"parameters\", parameters),\n                        \"kms_required\": loc_param.get(\"kms_required\", kms_required),\n                        \"ip_addresses\": loc_param.get(\"ip_addresses\", ip_addresses),\n                        \"upstreams\": loc_param.get(\"upstreams\", upstreams),\n                        \"server_block_parameters\": loc_param.get(\"server_block_parameters\", server_block_parameters),\n                        \"new_location_path\": param_new_path,\n                        \"selected_dc\": loc_param.get(\"selected_dc\", selected_dc),\n                    }\n                    normalized.append(norm_param)\n            if normalized:\n                return normalized\n        # CASE 2: Множественные locations в поле \"locations\"\n        if locations_list and isinstance(locations_list, list):\n            return [\n                {\n                    \"location\": loc,\n                    \"parameters\": parameters,\n                    \"kms_required\": kms_required,\n                    \"ip_addresses\": ip_addresses,\n                    \"upstreams\": upstreams,\n                    \"server_block_parameters\": server_block_parameters,\n                    \"new_location_path\": new_location_path,\n                    \"selected_dc\": selected_dc,\n                }\n                for loc in locations_list\n                if loc  # Исключить пустые\n            ]\n        # CASE 3: Одна location\n        if single_location:\n            return [\n                {\n                    \"location\": single_location,\n                    \"parameters\": parameters,\n                    \"kms_required\": kms_required,\n                    \"ip_addresses\": ip_addresses,\n                    \"upstreams\": upstreams,\n                    \"server_block_parameters\": server_block_parameters,\n                    \"new_location_path\": new_location_path,\n                    \"selected_dc\": selected_dc,\n                }\n            ]\n        # CASE 4: Ничего не найдено\n        return []\n\n    def _parse_yaml_config(self, config_text: str) -> Tuple[str, List[str], List[Dict]]:\n        \"\"\"\n        Parse YAML config and extract server directives and locations.\n        Returns: (config_key, server_directives, locations)\n        \"\"\"\n        parsed_data = yaml.safe_load(config_text)\n        if isinstance(parsed_data, list):  # Handle top-level list YAML\n            key = \"default_config\"\n            items = parsed_data\n        elif isinstance(parsed_data, dict) and parsed_data:\n            key = list(parsed_data.keys())[0]\n            items = parsed_data[key]\n        else:\n            raise ValueError(\"Invalid YAML structure: must be dict or list\")\n        if not isinstance(items, list):\n            items = [items]  # Ensure items is always a list\n        server_directives = []\n        locations = []\n        for item in items:\n            item_str = str(item).strip()\n            if item_str.startswith(\"location \"):\n                # Parse location: location /path { ... }\n                match = re.match(r\"location\\s+([^{]+)\\s*{(.*)}\", item_str, re.DOTALL)\n                if match:\n                    path = match.group(1).strip()\n                    content = match.group(2).strip().rstrip(\"};\")\n                    directives = [d.strip().rstrip(\";\").strip() + \";\"\n                                  for d in content.split(\";\") if d.strip()]\n                    # Calculate hash\n                    content_str = f\"{path}:{content}\"\n                    loc_hash = hashlib.sha1(content_str.encode(\"utf-8\", errors=\"ignore\")).hexdigest()\n                    locations.append({\n                        \"path\": path,\n                        \"directives\": directives,\n                        \"hash\": loc_hash\n                    })\n                else:\n                    # Fallback to server directive\n                    cleaned = item_str.rstrip(\";\").strip()\n                    if not item_str.endswith(\";\"):\n                        cleaned += \";\"\n                    server_directives.append(cleaned)\n            elif item_str.startswith(\"- \"):\n                directive = item_str.lstrip(\"- \").rstrip(\";\").strip()\n                if not item_str.lstrip(\"- \").endswith(\";\"):\n                    directive += \";\"\n                server_directives.append(directive)\n            else:\n                directive = item_str.rstrip(\";\").strip()\n                if not item_str.endswith(\";\"):\n                    directive += \";\"\n                server_directives.append(directive)\n        return key, server_directives, locations\n\n    def _find_location(self, locations: List[Dict], target_location: str) -> Optional[Dict]:\n        \"\"\"Find location block by path with normalization.\"\"\"\n        normalized_target = target_location\n        if target_location != \"/\" and not target_location.endswith(\"/\"):\n            normalized_target = target_location + \"/\"\n        # Try normalized match\n        for loc in locations:\n            path = loc.get(\"path\", \"\")\n            normalized_path = path\n            if path != \"/\" and not path.endswith(\"/\"):\n                normalized_path = path + \"/\"\n            if normalized_path == normalized_target or path == target_location:\n                return loc\n        # Try exact match (for modifiers like \"= /path\")\n        for loc in locations:\n            if loc.get(\"path\") == target_location:\n                return loc\n        return None\n\n    def build_selected_block(self) -> Message:\n        \"\"\"\n        Select the target blocks based on agent1_data from ALL matching configs.\n        Handles both single and multiple locations.\n        🆕 Now includes multi-DC information.\n        \"\"\"\n        try:\n            search_result = self._get_search_result()\n\n            # 🆕 Extract multi-DC info\n            multi_dc_info = self._extract_multi_dc_info(search_result)\n            # Extract agent1_data using universal method\n            agent1_data = self._get_agent1_data(search_result)\n\n\n            operation = search_result.get(\"operation\", agent1_data.get(\"operation\", \"ADD_PARAMETERS\"))\n            target_domains = search_result.get(\"domains\", agent1_data.get(\"domains\", []))\n            # 🔥 НОВОЕ: Нормализовать location_parameters - работает для 1 или N locations\n            location_parameters = self._normalize_location_parameters(agent1_data)\n            source_field = getattr(self, 'source_field', 'full_config_text')\n            all_configs = search_result.get(\"all_configs\", [])\n            if not all_configs:\n                return Message(text=json.dumps({\n                    \"error\": \"No configs found in all_configs\",\n                    \"selected_blocks\": [],\n                    **multi_dc_info  # 🆕 Include multi-DC info even in error\n                }, ensure_ascii=False))\n            selected_blocks = []\n            errors = []\n            # OPERATION-SPECIFIC LOGIC\n            is_create_operation = operation == \"CREATE_LOCATION\"\n            is_delete_operation = operation == \"DELETE_LOCATION\"\n            is_modify_path_operation = operation == \"MODIFY_LOCATION_PATH\"  # NEW\n            requires_existing_location = is_delete_operation or operation in [\n                \"MODIFY_PARAMETERS\",\n                \"ADD_PARAMETERS\",\n                \"CONDITIONAL_ADD_PARAMETERS\",\n                \"DELETE_PARAMETERS\",\n                \"DELETE_KMS_PARAMETERS\",\n                \"MODIFY_UPSTREAM\",\n                \"MODIFY_LOCATION_PATH\",  # NEW - requires existing location\n                \"MAKE_PROTECTED\",  # Added support\n                \"MAKE_PUBLIC\"  # Added support\n            ]\n            # PROCESS ALL CONFIGURATIONS\n            for config in all_configs:\n                if not isinstance(config, dict):  # Safeguard against non-dict configs\n                    errors.append(f\"Invalid config type in all_configs: {type(config)} - skipping\")\n                    continue\n                # Check if config matches target domains\n                matching_domains = config.get(\"matching_domains\", [])\n                server_names = config.get(\"server_names\", [])\n\n                # 🆕 Get inferred_dc for this config\n                config_inferred_dc = config.get(\"inferred_dc\", [])\n\n                # Skip configs that don't match any target domain\n                if target_domains:\n                    if not any(domain in target_domains for domain in matching_domains):\n                        if not any(domain in target_domains for domain in server_names):\n                            continue\n                config_text = config.get(source_field)\n                if not config_text:\n                    errors.append(f\"No {source_field} in config {config.get('config_key', 'unknown')}\")\n                    continue\n                try:\n                    key, server_directives, locations = self._parse_yaml_config(config_text)\n                    # SERVER BLOCK (no specific locations = work with server block)\n                    if not location_parameters:\n                        server_str = \";\".join(server_directives)\n                        server_hash = hashlib.sha1(server_str.encode(\"utf-8\", errors=\"ignore\")).hexdigest()\n                        selected_blocks.append({\n                            \"config_key\": key,\n                            \"config_file\": config.get(\"config_file\"),\n                            \"server_names\": server_names,\n                            \"matching_domains\": matching_domains,\n                            \"location_path\": \"server_block\",\n                            \"directives\": server_directives,\n                            \"hash\": server_hash,\n                            \"type\": \"server\",\n                            \"operation\": operation,\n                            \"parameters\": agent1_data.get(\"parameters\", []),\n                            \"server_block_parameters\": agent1_data.get(\"server_block_parameters\", []),\n                            \"selected_dc\": agent1_data.get(\"selected_dc\", []),\n                            \"inferred_dc\": config_inferred_dc,  # 🆕 Add inferred DC\n                        })\n                    # LOCATION-SPECIFIC (process ALL locations - 1, 2, 3, N...)\n                    else:\n                        for loc_param in location_parameters:\n                            target_loc = loc_param.get(\"location\")\n                            if not target_loc:\n                                errors.append(\"Invalid location in location_parameters\")\n                                continue\n                            existing_location = self._find_location(locations, target_loc)\n                            # CREATE_LOCATION: location НЕ должна существовать\n                            if is_create_operation:\n                                if existing_location:\n                                    errors.append(\n                                        f\"Location '{target_loc}' already exists in {key}. \"\n                                        f\"Cannot create duplicate location.\"\n                                    )\n                                else:\n                                    # Location doesn't exist - good for CREATE_LOCATION\n                                    selected_blocks.append({\n                                        \"config_key\": key,\n                                        \"config_file\": config.get(\"config_file\"),\n                                        \"server_names\": server_names,\n                                        \"matching_domains\": matching_domains,\n                                        \"location_path\": target_loc,\n                                        \"directives\": [],  # Empty - will be populated by LLM\n                                        \"hash\": None,\n                                        \"type\": \"location\",\n                                        \"operation\": operation,\n                                        \"existing_locations\": [loc.get(\"path\") for loc in locations],\n                                        \"create_mode\": True,\n                                        \"parameters\": loc_param.get(\"parameters\", []),\n                                        \"kms_required\": loc_param.get(\"kms_required\", False),\n                                        \"ip_addresses\": loc_param.get(\"ip_addresses\", []),\n                                        \"upstreams\": loc_param.get(\"upstreams\", []),\n                                        \"server_block_parameters\": loc_param.get(\"server_block_parameters\", []),\n                                        \"selected_dc\": loc_param.get(\"selected_dc\", []),\n                                        \"inferred_dc\": config_inferred_dc,  # 🆕 Add inferred DC\n                                    })\n                            # DELETE_LOCATION: location ДОЛЖНА существовать\n                            elif is_delete_operation:\n                                if existing_location:\n                                    selected_blocks.append({\n                                        \"config_key\": key,\n                                        \"config_file\": config.get(\"config_file\"),\n                                        \"server_names\": server_names,\n                                        \"matching_domains\": matching_domains,\n                                        \"location_path\": existing_location.get(\"path\"),\n                                        \"directives\": existing_location.get(\"directives\", []),\n                                        \"hash\": existing_location.get(\"hash\"),\n                                        \"type\": \"location\",\n                                        \"operation\": operation,\n                                        \"delete_mode\": True,\n                                        \"selected_dc\": loc_param.get(\"selected_dc\", []),\n                                        \"inferred_dc\": config_inferred_dc,  # 🆕 Add inferred DC\n                                    })\n                                else:\n                                    errors.append(\n                                        f\"Location '{target_loc}' not found in {key}. \"\n                                        f\"Cannot delete non-existent location. \"\n                                        f\"Available: {[loc.get('path') for loc in locations]}\"\n                                    )\n                            # MODIFY/ADD/MODIFY_LOCATION_PATH/MAKE_PROTECTED/MAKE_PUBLIC: location ДОЛЖНА существовать\n                            elif requires_existing_location:\n                                if existing_location:\n                                    block_data = {\n                                        \"config_key\": key,\n                                        \"config_file\": config.get(\"config_file\"),\n                                        \"server_names\": server_names,\n                                        \"matching_domains\": matching_domains,\n                                        \"location_path\": existing_location.get(\"path\"),\n                                        \"directives\": existing_location.get(\"directives\", []),\n                                        \"hash\": existing_location.get(\"hash\"),\n                                        \"type\": \"location\",\n                                        \"operation\": operation,\n                                        \"parameters\": loc_param.get(\"parameters\", []),\n                                        \"kms_required\": loc_param.get(\"kms_required\", False),\n                                        \"ip_addresses\": loc_param.get(\"ip_addresses\", []),\n                                        \"upstreams\": loc_param.get(\"upstreams\", []),\n                                        \"server_block_parameters\": loc_param.get(\"server_block_parameters\", []),\n                                        \"selected_dc\": loc_param.get(\"selected_dc\", []),\n                                        \"inferred_dc\": config_inferred_dc,  # 🆕 Add inferred DC\n                                    }\n                                    # NEW: Add new_location_path for MODIFY_LOCATION_PATH operation\n                                    if operation == \"MODIFY_LOCATION_PATH\":\n                                        new_path = loc_param.get(\"new_location_path\")\n                                        if new_path:\n                                            block_data[\"new_location_path\"] = new_path\n                                            block_data[\"existing_locations\"] = [loc.get(\"path\") for loc in locations]\n                                        else:\n                                            errors.append(\n                                                f\"MODIFY_LOCATION_PATH requires 'new_location_path' for '{target_loc}'\"\n                                            )\n                                            continue\n                                    selected_blocks.append(block_data)\n                                else:\n                                    errors.append(\n                                        f\"Location '{target_loc}' not found in {key}. \"\n                                        f\"Available: {[loc.get('path') for loc in locations]}\"\n                                    )\n                            else:\n                                # Fallback for unknown operations\n                                errors.append(f\"Unknown operation '{operation}' for location '{target_loc}'\")\n                except Exception as e:\n                    errors.append(f\"Error parsing config {config.get('config_key', 'unknown')}: {str(e)}\")\n                    continue\n            # Prepare result\n            result = {\n                \"selected_blocks\": selected_blocks,\n                \"total_configs_scanned\": len(all_configs),\n                \"total_blocks_found\": len(selected_blocks),\n                \"target_locations\": [lp.get(\"location\") for lp in location_parameters],\n                \"target_domains\": target_domains,\n                \"operation\": operation,\n                \"locations_count\": len(location_parameters),\n                \"parameters\": agent1_data.get(\"parameters\", []),\n                \"location_parameters\": location_parameters,\n                \"server_block_parameters\": agent1_data.get(\"server_block_parameters\", []),\n\n                # 🆕 Multi-DC information\n                **multi_dc_info,\n            }\n            if errors:\n                result[\"warnings\"] = errors\n            if not selected_blocks:\n                if is_create_operation:\n                    result[\"error\"] = (\n                        f\"Cannot create locations {[lp.get('location') for lp in location_parameters]} - \"\n                        f\"they may already exist or no valid configs found\"\n                    )\n                elif is_delete_operation:\n                    result[\"error\"] = (\n                        f\"Cannot delete locations - not found in configs\"\n                    )\n                else:\n                    result[\"error\"] = (\n                        f\"Locations not found in any of {len(all_configs)} configs\"\n                    )\n\n            # 🆕 Add multi-DC warning to result if applicable\n            if multi_dc_info[\"found_in_multiple_dc\"]:\n                if \"warnings\" not in result:\n                    result[\"warnings\"] = []\n                result[\"warnings\"].insert(0,\n                                          f\"⚠️ MULTI-DC: Domain found in {multi_dc_info['dc_count']} datacenters: \"\n                                          f\"{', '.join(multi_dc_info['unique_dcs'])}. \"\n                                          f\"Ensure changes are applied to all required locations!\"\n                                          )\n\n            return Message(text=json.dumps(result, ensure_ascii=False))\n        except Exception as e:\n            return Message(text=json.dumps({\n                \"error\": f\"Error in Location Selector: {str(e)}\",\n                \"selected_blocks\": []\n            }, ensure_ascii=False))\n\n    def build_operation_context(self) -> Message:\n        \"\"\"\n        Extract operation context from agent1_data.\n        🆕 Now includes multi-DC information.\n        \"\"\"\n        try:\n            search_result = self._get_search_result()\n\n            # 🆕 Extract multi-DC info\n            multi_dc_info = self._extract_multi_dc_info(search_result)\n            agent1_data = self._get_agent1_data(search_result)\n\n\n            # 🔥 НОВОЕ: Нормализовать\n            location_parameters = self._normalize_location_parameters(agent1_data)\n            all_configs = search_result.get(\"all_configs\", [])\n\n            operation_context = {\n                \"operation\": agent1_data.get(\"operation\"),\n                \"domain\": agent1_data.get(\"domain\"),\n                \"domains\": agent1_data.get(\"domains\", []),\n                \"location\": agent1_data.get(\"location\"),\n                \"locations\": agent1_data.get(\"locations\", []),\n                \"from_location\": agent1_data.get(\"from_location\"),  # NEW\n                \"to_location\": agent1_data.get(\"to_location\"),  # NEW\n                \"new_location_path\": agent1_data.get(\"new_location_path\"),\n                \"preserve_directives\": agent1_data.get(\"preserve_directives\"),  # NEW\n                \"parameters\": agent1_data.get(\"parameters\", []),\n                \"location_parameters\": location_parameters,  # Нормализованные\n                \"ip_addresses\": agent1_data.get(\"ip_addresses\", []),\n                \"upstreams\": agent1_data.get(\"upstreams\"),\n                \"server_block_parameters\": agent1_data.get(\"server_block_parameters\", []),\n                \"kms_required\": agent1_data.get(\"kms_required\"),\n                \"kms_mentioned\": agent1_data.get(\"kms_mentioned\"),\n                \"conditional_add\": agent1_data.get(\"conditional_add\"),\n                \"total_configs_found\": len(all_configs),\n                \"config_files\": [cfg.get(\"config_file\") for cfg in all_configs if isinstance(cfg, dict)],\n                \"config_keys\": [cfg.get(\"config_key\") for cfg in all_configs if isinstance(cfg, dict)],\n                \"locations_count\": len(location_parameters),\n                \"selected_dc\": agent1_data.get(\"selected_dc\", []),\n\n                # 🆕 Multi-DC information\n                **multi_dc_info,\n            }\n            return Message(text=json.dumps(operation_context, ensure_ascii=False))\n        except Exception as e:\n            return Message(text=json.dumps({\n                \"error\": f\"Error extracting operation context: {str(e)}\"\n            }, ensure_ascii=False))\n\n    def build_error_message(self) -> Message:\n        \"\"\"\n        Return error message if any issues occur.\n        🆕 Now includes multi-DC information.\n        \"\"\"\n        try:\n            search_result = self._get_search_result()\n\n            # 🆕 Extract multi-DC info\n            multi_dc_info = self._extract_multi_dc_info(search_result)\n\n            if search_result.get(\"status\") == \"error\":\n                return Message(text=json.dumps({\n                    \"error\": f\"Search error: {search_result.get('error_message')}\",\n                    \"block_exists\": False,\n                    **multi_dc_info  # 🆕 Include multi-DC info\n                }, ensure_ascii=False))\n            agent1_data = self._get_agent1_data(search_result)\n\n            # 🔥 НОВОЕ: Нормализовать\n            location_parameters = self._normalize_location_parameters(agent1_data)\n            operation = agent1_data.get(\"operation\", \"ADD_PARAMETERS\")\n            target_domains = agent1_data.get(\"domains\", [])\n            all_configs = search_result.get(\"all_configs\", [])\n            source_field = getattr(self, 'source_field', 'full_config_text')\n            if not all_configs:\n                return Message(text=json.dumps({\n                    \"error\": \"No configs found in all_configs\",\n                    \"block_exists\": False,\n                    **multi_dc_info  # 🆕 Include multi-DC info\n                }, ensure_ascii=False))\n            # Operation-specific checks\n            is_create_operation = operation == \"CREATE_LOCATION\"\n            is_delete_operation = operation == \"DELETE_LOCATION\"\n            found_count = 0\n            errors = []\n            # Check all configs\n            for config in all_configs:\n                if not isinstance(config, dict):  # Safeguard\n                    errors.append(f\"Invalid config type in all_configs: {type(config)} - skipping\")\n                    continue\n                matching_domains = config.get(\"matching_domains\", [])\n                server_names = config.get(\"server_names\", [])\n                # Skip configs that don't match target domains\n                if target_domains:\n                    if not any(domain in target_domains for domain in matching_domains):\n                        if not any(domain in target_domains for domain in server_names):\n                            continue\n                config_text = config.get(source_field)\n                if not config_text:\n                    errors.append(f\"No {source_field} in {config.get('config_key', 'unknown')}\")\n                    continue\n                try:\n                    key, server_directives, locations = self._parse_yaml_config(config_text)\n                    # Для каждой location проверить\n                    for loc_param in location_parameters:\n                        target_loc = loc_param.get(\"location\")\n                        if not target_loc:\n                            continue\n                        if not location_parameters:  # Server block\n                            if len(server_directives) > 0:\n                                found_count += 1\n                        elif is_create_operation:\n                            # For CREATE: config is valid if location DOESN'T exist\n                            found_location = self._find_location(locations, target_loc)\n                            if not found_location:\n                                found_count += 1  # Good - can create\n                            else:\n                                errors.append(\n                                    f\"Location '{target_loc}' already exists in {key}\"\n                                )\n                        elif is_delete_operation:\n                            # For DELETE: config is valid if location DOES exist\n                            found_location = self._find_location(locations, target_loc)\n                            if found_location:\n                                found_count += 1  # Good - can delete\n                            else:\n                                errors.append(\n                                    f\"Location '{target_loc}' not found in {key}. \"\n                                    f\"Available: {[loc.get('path') for loc in locations]}\"\n                                )\n                        else:\n                            # For other operations (including MODIFY_LOCATION_PATH, MAKE_PROTECTED, MAKE_PUBLIC): location must exist\n                            found_location = self._find_location(locations, target_loc)\n                            if found_location:\n                                found_count += 1\n                            else:\n                                errors.append(\n                                    f\"Location '{target_loc}' not found in {key}. \"\n                                    f\"Available: {[loc.get('path') for loc in locations]}\"\n                                )\n                except Exception as e:\n                    errors.append(f\"Error parsing {config.get('config_key', 'unknown')}: {str(e)}\")\n            if found_count > 0:\n                result = {\n                    \"error\": None,\n                    \"found_in_configs\": found_count,\n                    \"total_configs\": len(all_configs),\n                    \"operation\": operation,\n                    \"locations_count\": len(location_parameters),\n                    **multi_dc_info,  # 🆕 Include multi-DC info\n                }\n                if is_create_operation:\n                    result[\"can_create\"] = True\n                    result[\"block_exists\"] = False\n                elif is_delete_operation:\n                    result[\"can_delete\"] = True\n                    result[\"block_exists\"] = True\n                else:\n                    result[\"block_exists\"] = True\n                if errors:\n                    result[\"warnings\"] = errors\n\n                # 🆕 Add multi-DC warning if applicable\n                if multi_dc_info[\"found_in_multiple_dc\"]:\n                    if \"warnings\" not in result:\n                        result[\"warnings\"] = []\n                    result[\"warnings\"].insert(0,\n                                              f\"⚠️ MULTI-DC: Domain found in {multi_dc_info['dc_count']} datacenters!\"\n                                              )\n\n                return Message(text=json.dumps(result, ensure_ascii=False))\n            else:\n                error_msg = {\n                    \"block_exists\": False,\n                    \"total_configs_checked\": len(all_configs),\n                    \"operation\": operation,\n                    \"locations_count\": len(location_parameters),\n                    \"details\": errors,\n                    **multi_dc_info,  # 🆕 Include multi-DC info\n                }\n                if is_create_operation:\n                    error_msg[\"error\"] = (\n                        f\"Cannot create locations - they may already exist in all configs\"\n                    )\n                    error_msg[\"can_create\"] = False\n                elif is_delete_operation:\n                    error_msg[\"error\"] = (\n                        f\"Cannot delete locations - not found in any config\"\n                    )\n                    error_msg[\"can_delete\"] = False\n                else:\n                    error_msg[\"error\"] = (\n                        f\"Locations not found in any config\"\n                    )\n                return Message(text=json.dumps(error_msg, ensure_ascii=False))\n        except Exception as e:\n            return Message(text=json.dumps({\n                \"error\": f\"Error checking block: {str(e)}\",\n                \"block_exists\": False\n            }, ensure_ascii=False))\n"
+              },
+              "source_field": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Source field",
+                "dynamic": false,
+                "info": "Field containing YAML config text (full_config_text or config_block)",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "source_field",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "full_config_text"
+              },
+              "universal_search_result": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Universal Search Result",
+                "dynamic": false,
+                "info": "Output from Universal Search (contains agent1_data)",
+                "input_types": [
+                  "Data",
+                  "dict"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "universal_search_result",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "selected_block",
+          "showNode": true,
+          "type": "LocationSelectorFromUniversalSearch"
+        },
+        "dragging": false,
+        "id": "LocationSelectorFromUniversalSearch-8dtdG",
+        "measured": {
+          "height": 263,
+          "width": 320
+        },
+        "position": {
+          "x": 1361.1113095942496,
+          "y": 506.1026718509382
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "UniversalSearchConfigComponent-u7ief",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Универсально сканирует YML файлы по доменам из любой структуры JSON (включая Arbitrator payload)",
+            "display_name": "Universal Search Config",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "agent1_json",
+              "config_base_path"
+            ],
+            "frozen": false,
+            "icon": "search",
+            "legacy": false,
+            "lf_version": "1.6.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Config Data",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "search_config",
+                "name": "config_data",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "agent1_json": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Agent 1 JSON Output",
+                "dynamic": false,
+                "info": "JSON с извлечёнными данными от Agent 1 или Arbitrator (любая структура)",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "agent1_json",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\nfrom langflow.io import MessageTextInput, StrInput, Output\nfrom langflow.schema import Data\nimport json\nimport yaml\nimport os\nimport glob\nimport re\nfrom typing import List, Dict, Any, Optional\n\n\nclass UniversalSearchConfigComponent(Component):\n    display_name = \"Universal Search Config\"\n    description = \"Универсально сканирует YML файлы по доменам из любой структуры JSON (включая Arbitrator payload)\"\n    icon = \"search\"\n    inputs = [\n        MessageTextInput(\n            name=\"agent1_json\",\n            display_name=\"Agent 1 JSON Output\",\n            info=\"JSON с извлечёнными данными от Agent 1 или Arbitrator (любая структура)\",\n            required=True\n        ),\n        StrInput(\n            name=\"config_base_path\",\n            display_name=\"Config Base Path\",\n            info=\"Путь к родительской папке с конфигами (например, /path/to/mos_ru_nginx/)\",\n            value=\"/Users/rusk/PycharmProjects/fastapi/portalFastDjango/mosru_nginx/mos_ru_nginx/\",\n            required=True\n        )\n    ]\n    outputs = [\n        Output(\n            display_name=\"Config Data\",\n            name=\"config_data\",\n            method=\"search_config\"\n        )\n    ]\n\n    def search_config(self) -> Data:\n        \"\"\"\n        Универсально обрабатывает любой JSON/Python dict и ищет конфигурации\n        \"\"\"\n        try:\n            # 🔧 ПРЕДОБРАБОТКА: Очищаем от markdown блоков\n            cleaned_input = self._clean_markdown(self.agent1_json)\n\n            # 🔄 ПАРСИМ: Поддержка и JSON, и Python dict\n            raw_data = self._parse_input(cleaned_input)\n\n            # 🔄 НОРМАЛИЗАЦИЯ: Извлекаем payload если это Arbitrator output\n            agent1_data = self._normalize_input(raw_data)\n            # 🔍 УНИВЕРСАЛЬНОЕ ИЗВЛЕЧЕНИЕ ДОМЕНОВ\n            domains = self._universal_extract_domains(agent1_data)\n\n            # 🔍 УНИВЕРСАЛЬНОЕ ИЗВЛЕЧЕНИЕ ДРУГИХ ДАННЫХ\n            locations = self._universal_extract_locations(agent1_data)\n            ip_addresses = self._universal_extract_ips(agent1_data)\n            upstreams = self._universal_extract_upstreams(agent1_data)\n            parameters = self._universal_extract_parameters(agent1_data)\n            location_parameters = self._universal_extract_location_parameters(agent1_data)\n            operation = self._universal_extract_operation(agent1_data)\n            selected_dc = self._universal_extract_selected_dc(agent1_data)\n            # ✅ ПРОВЕРЯЕМ СТАТУС\n            status = self._check_status(raw_data)  # Проверяем оригинальные данные\n            if status and status.get(\"is_error\"):\n                return self._return_error_status(status, agent1_data)\n            # ❌ ОШИБКА: Домены не найдены\n            if not domains:\n                return self._return_no_domains_error(\n                    agent1_data, locations, ip_addresses, parameters, operation\n                )\n            # 🔍 ОПРЕДЕЛЯЕМ ПАПКИ ДЛЯ ПОИСКА\n            search_folders = self._get_search_folders(selected_dc)\n            # 🔍 СКАНИРУЕМ ВСЕ YML ФАЙЛЫ В ВЫБРАННЫХ ПАПКАХ\n            config_results = []\n            scanned_files = 0\n            for folder in search_folders:\n                folder_path = os.path.join(self.config_base_path, folder)\n                if not os.path.isdir(folder_path):\n                    continue\n                yml_files = glob.glob(os.path.join(folder_path, \"*.yml\"))\n                scanned_files += len(yml_files)\n                for yml_file in yml_files:\n                    file_results = self._scan_yml_file(yml_file, domains)\n                    for res in file_results:\n                        res[\"folder\"] = folder\n                        res[\"inferred_dc\"] = self._infer_dc_from_folder(folder)\n                    config_results.extend(file_results)\n            # Удаляем дубликаты (по полному пути и ключу)\n            unique_results = self._deduplicate_results(config_results)\n            # ❌ ОШИБКА: Конфиги не найдены\n            if not unique_results:\n                return self._return_not_found_error(\n                    domains, scanned_files, agent1_data,\n                    locations, ip_addresses, parameters, operation\n                )\n            # ✅ УСПЕХ: Конфиг найден\n            first_config = unique_results[0]\n\n            # 🆕 АНАЛИЗ: Проверяем, найден ли домен в нескольких ЦОД\n            multi_dc_info = self._analyze_multi_dc_presence(unique_results, domains)\n\n            result = {\n                \"status\": \"success\",\n\n                # 📦 Конфиг данные\n                \"config_file\": first_config[\"config_file\"],\n                \"config_key\": first_config[\"config_key\"],\n                \"full_config_text\": first_config[\"full_config_text\"],\n                \"server_names\": first_config[\"server_names\"],\n                \"matching_domains\": first_config[\"matching_domains\"],\n                # 📦 Извлечённые данные (нормализованные)\n                \"agent1_data\": agent1_data,\n                \"operation\": operation,\n                \"domains\": domains,\n                \"locations\": locations,\n                \"ip_addresses\": ip_addresses,\n                \"upstreams\": upstreams,\n                \"parameters\": parameters,\n                \"location_parameters\": location_parameters,\n                \"selected_dc\": selected_dc,\n                # 📊 Метаданные\n                \"scanned_files\": scanned_files,\n                \"found_configs\": len(unique_results),\n                \"all_configs\": unique_results,\n                \"data_complete\": True,\n                \"error_type\": None,\n                \"error_message\": None,\n\n                # 🆕 НОВЫЕ КЛЮЧИ: Информация о нахождении в нескольких ЦОД\n                \"found_in_multiple_dc\": multi_dc_info[\"found_in_multiple_dc\"],\n                \"dc_count\": multi_dc_info[\"dc_count\"],\n                \"unique_dcs\": multi_dc_info[\"unique_dcs\"],\n                \"domain_dc_mapping\": multi_dc_info[\"domain_dc_mapping\"],\n                \"domains_in_multiple_dc\": multi_dc_info[\"domains_in_multiple_dc\"],\n            }\n            # Формируем сообщение\n            msg = self._format_success_message(result)\n            return Data(data=result, text=msg)\n        except json.JSONDecodeError as e:\n            return self._return_json_error(e, self.agent1_json)\n        except Exception as e:\n            return self._return_unexpected_error(e)\n\n    # ==========================================\n    # 🆕 НОВЫЙ МЕТОД: Анализ присутствия в нескольких ЦОД\n    # ==========================================\n    def _analyze_multi_dc_presence(self, config_results: List[Dict], domains: List[str]) -> Dict:\n        \"\"\"\n        Анализирует, найден ли домен в нескольких ЦОД\n\n        Returns:\n            Dict с ключами:\n            - found_in_multiple_dc: bool - True если хотя бы один домен найден в >1 ЦОД\n            - dc_count: int - количество уникальных ЦОД где найдены конфиги\n            - unique_dcs: List[str] - список уникальных ЦОД\n            - domain_dc_mapping: Dict[str, List[str]] - маппинг домен -> список ЦОД\n            - domains_in_multiple_dc: List[str] - домены, найденные в нескольких ЦОД\n        \"\"\"\n        # Собираем все уникальные ЦОД из результатов\n        all_dcs = set()\n        for config in config_results:\n            inferred_dc = config.get(\"inferred_dc\", [])\n            all_dcs.update(inferred_dc)\n\n        unique_dcs = sorted(list(all_dcs))\n        dc_count = len(unique_dcs)\n\n        # Строим маппинг: домен -> в каких ЦОД найден\n        domain_dc_mapping = {}\n        for domain in domains:\n            domain_dcs = set()\n            for config in config_results:\n                matching_domains = config.get(\"matching_domains\", [])\n                if domain in matching_domains:\n                    inferred_dc = config.get(\"inferred_dc\", [])\n                    domain_dcs.update(inferred_dc)\n            domain_dc_mapping[domain] = sorted(list(domain_dcs))\n\n        # Определяем домены, которые найдены в нескольких ЦОД\n        domains_in_multiple_dc = [\n            domain for domain, dcs in domain_dc_mapping.items()\n            if len(dcs) > 1\n        ]\n\n        # Главный флаг: есть ли хотя бы один домен в нескольких ЦОД\n        found_in_multiple_dc = len(domains_in_multiple_dc) > 0\n\n        return {\n            \"found_in_multiple_dc\": found_in_multiple_dc,\n            \"dc_count\": dc_count,\n            \"unique_dcs\": unique_dcs,\n            \"domain_dc_mapping\": domain_dc_mapping,\n            \"domains_in_multiple_dc\": domains_in_multiple_dc\n        }\n\n    # ==========================================\n    # ПРЕДОБРАБОТКА И НОРМАЛИЗАЦИЯ\n    # ==========================================\n    def _clean_markdown(self, raw_input: str) -> str:\n        \"\"\"Убирает только markdown разметку\"\"\"\n        if not raw_input:\n            return raw_input\n\n        cleaned = raw_input.strip()\n\n        patterns = [\n            (r'^```json\\s*\\n', ''),\n            (r'^```\\s*\\n', ''),\n            (r'\\n```\\s*$', ''),\n            (r'^```json\\s*', ''),\n            (r'^```\\s*', ''),\n            (r'```\\s*$', ''),\n        ]\n\n        for pattern, replacement in patterns:\n            cleaned = re.sub(pattern, replacement, cleaned)\n\n        return cleaned.strip()\n\n    def _parse_input(self, text: str) -> Dict:\n        \"\"\"\n        🔄 Парсит входные данные — поддерживает JSON и Python dict\n        \"\"\"\n        # Способ 1: Пробуем как JSON\n        try:\n            return json.loads(text)\n        except json.JSONDecodeError:\n            pass\n\n        # Способ 2: Пробуем как Python dict через ast.literal_eval\n        try:\n            import ast\n            result = ast.literal_eval(text)\n            if isinstance(result, dict):\n                return result\n        except (ValueError, SyntaxError):\n            pass\n\n        # Способ 3: Ручная конвертация Python → JSON\n        try:\n            converted = text\n            converted = re.sub(r'\\bNone\\b', 'null', converted)\n            converted = re.sub(r'\\bTrue\\b', 'true', converted)\n            converted = re.sub(r'\\bFalse\\b', 'false', converted)\n            converted = converted.replace(\"'\", '\"')\n            return json.loads(converted)\n        except json.JSONDecodeError:\n            pass\n\n        # Если ничего не сработало — выбрасываем ошибку\n        raise json.JSONDecodeError(\n            f\"Не удалось распарсить ни как JSON, ни как Python dict\",\n            text,\n            0\n        )\n\n    def _normalize_input(self, raw_data: Any) -> Dict:\n        \"\"\"\n        🔄 НОРМАЛИЗАЦИЯ: Извлекает payload из Arbitrator output\n\n        Поддерживает форматы:\n        1. Arbitrator: {\"status\": \"SUCCESS\", \"payload\": {...}, \"ready_for_execution\": true}\n        2. Прямой Agent1: {\"operation\": \"...\", \"domain\": \"...\", ...}\n        3. Вложенный: {\"data\": {\"payload\": {...}}}\n        \"\"\"\n        if not isinstance(raw_data, dict):\n            return raw_data\n\n        # Случай 1: Arbitrator output с payload\n        if \"payload\" in raw_data and isinstance(raw_data[\"payload\"], dict):\n            # Проверяем что это успешный Arbitrator response\n            status = raw_data.get(\"status\", \"\").upper()\n            if status in [\"SUCCESS\", \"COMPLETE\", \"OK\"]:\n                return raw_data[\"payload\"]\n            # Даже если статус не SUCCESS, но payload есть — используем его\n            if raw_data[\"payload\"]:\n                return raw_data[\"payload\"]\n\n        # Случай 2: Вложенный data.payload\n        if \"data\" in raw_data and isinstance(raw_data[\"data\"], dict):\n            if \"payload\" in raw_data[\"data\"]:\n                return raw_data[\"data\"][\"payload\"]\n            return raw_data[\"data\"]\n\n        # Случай 3: Прямой Agent1 output (уже нормализован)\n        return raw_data\n\n    # ==========================================\n    # УНИВЕРСАЛЬНЫЕ МЕТОДЫ ИЗВЛЕЧЕНИЯ ДАННЫХ\n    # ==========================================\n    def _universal_extract_domains(self, data: Any, visited: Optional[set] = None) -> List[str]:\n        \"\"\"\n        Рекурсивно ищет домены во ВСЕЙ структуре JSON\n        \"\"\"\n        if visited is None:\n            visited = set()\n\n        domains = []\n\n        data_id = id(data)\n        if data_id in visited:\n            return domains\n        visited.add(data_id)\n\n        if isinstance(data, dict):\n            for key in [\"domain\", \"domains\", \"server_name\", \"server_names\"]:\n                if key in data:\n                    value = data[key]\n                    if isinstance(value, str) and value.strip():\n                        domains.append(value.strip())\n                    elif isinstance(value, list):\n                        for item in value:\n                            if isinstance(item, str) and item.strip():\n                                domains.append(item.strip())\n\n            for value in data.values():\n                domains.extend(self._universal_extract_domains(value, visited))\n\n        elif isinstance(data, list):\n            for item in data:\n                domains.extend(self._universal_extract_domains(item, visited))\n\n        return list(set([d for d in domains if d and self._looks_like_domain(d)]))\n\n    def _universal_extract_locations(self, data: Any, visited: Optional[set] = None) -> List[str]:\n        \"\"\"\n        Рекурсивно ищет location/locations во ВСЕЙ структуре JSON\n        \"\"\"\n        if visited is None:\n            visited = set()\n\n        locations = []\n\n        data_id = id(data)\n        if data_id in visited:\n            return locations\n        visited.add(data_id)\n\n        if isinstance(data, dict):\n            for key in [\"location\", \"locations\", \"kms_locations\", \"public_locations\"]:\n                if key in data:\n                    value = data[key]\n                    if isinstance(value, str) and value.strip():\n                        locations.append(value.strip())\n                    elif isinstance(value, list):\n                        for item in value:\n                            if isinstance(item, str) and item.strip():\n                                locations.append(item.strip())\n\n            for value in data.values():\n                if isinstance(value, (dict, list)):\n                    locations.extend(self._universal_extract_locations(value, visited))\n\n        elif isinstance(data, list):\n            for item in data:\n                locations.extend(self._universal_extract_locations(item, visited))\n\n        return list(set([loc for loc in locations if loc and loc.startswith(\"/\")]))\n\n    def _universal_extract_ips(self, data: Any, visited: Optional[set] = None) -> List[str]:\n        \"\"\"\n        Рекурсивно ищет IP адреса во ВСЕЙ структуре JSON\n        \"\"\"\n        if visited is None:\n            visited = set()\n\n        ips = []\n\n        data_id = id(data)\n        if data_id in visited:\n            return ips\n        visited.add(data_id)\n\n        if isinstance(data, dict):\n            for key in [\"ip_addresses\", \"ips\", \"servers\", \"upstream\", \"ip\", \"address\"]:\n                if key in data:\n                    value = data[key]\n                    if isinstance(value, str) and value.strip():\n                        ips.append(value.strip())\n                    elif isinstance(value, list):\n                        for item in value:\n                            if isinstance(item, str) and item.strip():\n                                ips.append(item.strip())\n\n            for value in data.values():\n                if isinstance(value, (dict, list)):\n                    ips.extend(self._universal_extract_ips(value, visited))\n\n        elif isinstance(data, list):\n            for item in data:\n                ips.extend(self._universal_extract_ips(item, visited))\n\n        return list(set([ip for ip in ips if ip and self._looks_like_ip(ip)]))\n\n    def _universal_extract_upstreams(self, data: Any, visited: Optional[set] = None) -> List[Dict]:\n        \"\"\"\n        🆕 Извлекает структурированные upstreams\n\n        Формат входа:\n        \"upstreams\": [\n            {\"upstream_type\": \"main\", \"ip_addresses\": [\"10.10.10.10\", ...], \"params\": []},\n            {\"upstream_type\": \"backup\", \"ip_addresses\": [...], \"params\": []}\n        ]\n        \"\"\"\n        if visited is None:\n            visited = set()\n\n        upstreams = []\n\n        data_id = id(data)\n        if data_id in visited:\n            return upstreams\n        visited.add(data_id)\n\n        if isinstance(data, dict):\n            # Прямой ключ upstreams\n            if \"upstreams\" in data and isinstance(data[\"upstreams\"], list):\n                for upstream in data[\"upstreams\"]:\n                    if isinstance(upstream, dict):\n                        normalized = {\n                            \"type\": upstream.get(\"upstream_type\", upstream.get(\"type\", \"main\")),\n                            \"ip_addresses\": upstream.get(\"ip_addresses\", upstream.get(\"ips\", [])),\n                            \"params\": upstream.get(\"params\", upstream.get(\"parameters\", []))\n                        }\n                        if normalized[\"ip_addresses\"]:\n                            upstreams.append(normalized)\n\n            # Рекурсивный поиск\n            for key, value in data.items():\n                if key != \"upstreams\" and isinstance(value, (dict, list)):\n                    upstreams.extend(self._universal_extract_upstreams(value, visited))\n\n        elif isinstance(data, list):\n            for item in data:\n                upstreams.extend(self._universal_extract_upstreams(item, visited))\n\n        return upstreams\n\n    def _universal_extract_location_parameters(self, data: Any, visited: Optional[set] = None) -> List[Dict]:\n        \"\"\"\n        🆕 Извлекает параметры для конкретных locations\n\n        Формат входа:\n        \"location_parameters\": [\n            {\"location\": \"/api_V2/\", \"parameters\": [], \"kms_required\": false},\n            ...\n        ]\n        \"\"\"\n        if visited is None:\n            visited = set()\n\n        loc_params = []\n\n        data_id = id(data)\n        if data_id in visited:\n            return loc_params\n        visited.add(data_id)\n\n        if isinstance(data, dict):\n            if \"location_parameters\" in data and isinstance(data[\"location_parameters\"], list):\n                for lp in data[\"location_parameters\"]:\n                    if isinstance(lp, dict) and \"location\" in lp:\n                        normalized = {\n                            \"location\": lp.get(\"location\"),\n                            \"parameters\": lp.get(\"parameters\", []),\n                            \"kms_required\": lp.get(\"kms_required\", False)\n                        }\n                        loc_params.append(normalized)\n\n            for key, value in data.items():\n                if key != \"location_parameters\" and isinstance(value, (dict, list)):\n                    loc_params.extend(self._universal_extract_location_parameters(value, visited))\n\n        elif isinstance(data, list):\n            for item in data:\n                loc_params.extend(self._universal_extract_location_parameters(item, visited))\n\n        return loc_params\n\n    def _universal_extract_parameters(self, data: Any, visited: Optional[set] = None) -> Dict:\n        \"\"\"\n        Ищет общие параметры в структуре JSON\n        \"\"\"\n        if visited is None:\n            visited = set()\n\n        parameters = {}\n\n        data_id = id(data)\n        if data_id in visited:\n            return parameters\n        visited.add(data_id)\n\n        if isinstance(data, dict):\n            # server_block_parameters\n            if \"server_block_parameters\" in data:\n                params = data[\"server_block_parameters\"]\n                if isinstance(params, list):\n                    parameters[\"server_block\"] = params\n                elif isinstance(params, dict):\n                    parameters[\"server_block\"] = params\n\n            # Общие parameters\n            if \"parameters\" in data:\n                params = data[\"parameters\"]\n                if isinstance(params, dict):\n                    parameters.update(params)\n                elif isinstance(params, list):\n                    parameters[\"general\"] = params\n\n            # Рекурсивно (но не в уже обработанные ключи)\n            for key, value in data.items():\n                if key not in [\"parameters\", \"server_block_parameters\", \"location_parameters\"] \\\n                        and isinstance(value, (dict, list)):\n                    sub_params = self._universal_extract_parameters(value, visited)\n                    for k, v in sub_params.items():\n                        if k not in parameters:\n                            parameters[k] = v\n\n        elif isinstance(data, list):\n            for item in data:\n                sub_params = self._universal_extract_parameters(item, visited)\n                parameters.update(sub_params)\n\n        return parameters\n\n    def _universal_extract_operation(self, data: Any) -> Optional[str]:\n        \"\"\"\n        Ищет тип операции в любой структуре\n        \"\"\"\n        if isinstance(data, dict):\n            for key in [\"operation\", \"operation_type\", \"action\", \"type\"]:\n                if key in data and data[key]:\n                    val = str(data[key])\n                    # Фильтруем не-операции\n                    if val.upper() not in [\"MAIN\", \"BACKUP\", \"PREFIX\", \"EXACT\"]:\n                        return val\n\n            for value in data.values():\n                if isinstance(value, (dict, list)):\n                    result = self._universal_extract_operation(value)\n                    if result:\n                        return result\n\n        elif isinstance(data, list):\n            for item in data:\n                result = self._universal_extract_operation(item)\n                if result:\n                    return result\n\n        return None\n\n    def _universal_extract_selected_dc(self, data: Any, visited: Optional[set] = None) -> List[str]:\n        \"\"\"\n        Рекурсивно ищет selected_dc во ВСЕЙ структуре JSON\n        \"\"\"\n        if visited is None:\n            visited = set()\n\n        dcs = []\n\n        data_id = id(data)\n        if data_id in visited:\n            return dcs\n        visited.add(data_id)\n\n        if isinstance(data, dict):\n            for key in [\"selected_dc\", \"dc\", \"datacenters\", \"datacenter\"]:\n                if key in data:\n                    value = data[key]\n                    if isinstance(value, str) and value.strip():\n                        dcs.append(value.strip())\n                    elif isinstance(value, list):\n                        for item in value:\n                            if isinstance(item, str) and item.strip():\n                                dcs.append(item.strip())\n\n            for value in data.values():\n                dcs.extend(self._universal_extract_selected_dc(value, visited))\n\n        elif isinstance(data, list):\n            for item in data:\n                dcs.extend(self._universal_extract_selected_dc(item, visited))\n\n        return list(set(dcs))\n\n    def _check_status(self, data: Any) -> Optional[Dict]:\n        \"\"\"\n        Проверяет статус ошибки в данных\n        \"\"\"\n        if isinstance(data, dict):\n            status = data.get(\"status\", \"\")\n\n            # Ошибка Arbitrator\n            if status == \"VALIDATION_FAILED\":\n                return {\n                    \"is_error\": True,\n                    \"status\": status,\n                    \"error_type\": \"VALIDATION_FAILED\",\n                    \"error_message\": \"Валидация не прошла\",\n                    \"missing_fields\": data.get(\"missing_fields\", []),\n                    \"clarification_questions\": data.get(\"clarification_questions\", [])\n                }\n\n            # Ошибка Agent1\n            if status == \"error\":\n                return {\n                    \"is_error\": True,\n                    \"status\": data.get(\"status\"),\n                    \"error_type\": data.get(\"error_type\"),\n                    \"error_message\": data.get(\"error_message\"),\n                    \"explanation\": data.get(\"explanation\"),\n                    \"warnings\": data.get(\"warnings\", [])\n                }\n        return None\n\n    # ==========================================\n    # ВАЛИДАЦИЯ\n    # ==========================================\n    def _looks_like_domain(self, text: str) -> bool:\n        \"\"\"Проверяет, похоже ли на домен\"\"\"\n        if not text or len(text) < 3:\n            return False\n        return '.' in text or re.match(r'^[a-zA-Z0-9\\-\\.]+$', text) is not None\n\n    def _looks_like_ip(self, text: str) -> bool:\n        \"\"\"Проверяет, похоже ли на IP адрес\"\"\"\n        if not text:\n            return False\n        ip_pattern = r'^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}(:\\d+)?$'\n        return re.match(ip_pattern, text) is not None\n\n    # ==========================================\n    # ЛОГИКА ПОИСКА ПО ПАПКАМ И DC\n    # ==========================================\n    def _get_all_folders(self) -> List[str]:\n        \"\"\"Возвращает список всех возможных папок\"\"\"\n        return [\n            \"production_ext_kor_sites\",\n            \"production_ext_nag_http\",\n            \"production_ext_nag_sites\",\n            \"production_ext_sites\",\n            \"production_kor_ngate_sites\",\n            \"production_kor_sites\",\n            \"production_mesh_main_kor_sites\",\n            \"production_mesh_rus_kor_sites\",\n            \"production_metro_kor_sites\",\n            \"production_metro_sites\",\n            \"production_moshub_ext_kor_sites\",\n            \"production_moshub_kor_sites\",\n            \"production_nag_sites\",\n            \"production_sites\",\n            \"production_upload_sites\",\n            \"stage_kor_sites\",\n            \"stage_nag_sites\",\n            \"stage_sites\",\n            \"test_kor_sites\",\n            \"test_nag_sites\",\n            \"test_sites\"\n        ]\n\n    def _get_search_folders(self, selected_dc: List[str]) -> List[str]:\n        \"\"\"Определяет папки для поиска на основе selected_dc\"\"\"\n        all_folders = self._get_all_folders()\n        if not selected_dc:\n            return all_folders\n\n        search_folders = set()\n        for dc in selected_dc:\n            if dc == \"dr\":\n                search_folders.update(self._get_folders_for_dc(\"korovinskiy\"))\n                search_folders.update(self._get_folders_for_dc(\"kurchatovskiy\"))\n            else:\n                search_folders.update(self._get_folders_for_dc(dc))\n        return list(search_folders)\n\n    def _get_folders_for_dc(self, dc: str) -> List[str]:\n        \"\"\"Возвращает папки для конкретного DC\"\"\"\n        all_folders = self._get_all_folders()\n\n        if dc == \"korovinskiy\":\n            # Исключаем metro и mesh - они относятся к отдельным DC\n            return [f for f in all_folders\n                    if \"_kor_\" in f\n                    and \"metro\" not in f\n                    and \"mesh\" not in f]\n\n        elif dc == \"kurchatovskiy\":\n            return [f for f in all_folders if\n                    f in [\"production_sites\", \"stage_sites\", \"test_sites\", \"production_ext_sites\",\n                          \"production_upload_sites\"]]  # убрал production_metro_sites\n\n        elif dc == \"nagornaya\":\n            return [f for f in all_folders if \"_nag_\" in f]\n\n        elif dc == \"moshub_rus\":\n            return [f for f in all_folders if \"moshub\" in f and \"ext\" not in f]\n\n        elif dc == \"ext_kurchatovskiy\":\n            return [f for f in all_folders if \"ext\" in f and \"_kor_\" not in f and \"_nag_\" not in f]\n\n        elif dc == \"ext_korovinskiy\":\n            return [f for f in all_folders if \"ext\" in f and \"_kor_\" in f]\n\n        elif dc == \"ext_nagornaya\":\n            return [f for f in all_folders if \"ext\" in f and \"_nag_\" in f]\n\n        elif dc == \"mesh\":\n            return [f for f in all_folders if \"mesh\" in f]\n\n        elif dc == \"top10_kurchatovskiy\":\n            return [f for f in all_folders if \"metro\" in f and \"_kor_\" not in f]\n\n        elif dc == \"top10_korovinskiy\":\n            return [f for f in all_folders if \"metro\" in f and \"_kor_\" in f]\n\n        return []\n\n    def _infer_dc_from_folder(self, folder: str) -> List[str]:\n        \"\"\"Определяет DC на основе имени папки\"\"\"\n        dcs = []\n        folder_lower = folder.lower()\n        if \"_kor_\" in folder_lower:\n            dcs.append(\"korovinskiy\")\n        if \"_nag_\" in folder_lower:\n            dcs.append(\"nagornaya\")\n        if folder in [\"production_sites\", \"stage_sites\", \"test_sites\", \"production_ext_sites\", \"production_metro_sites\",\n                      \"production_upload_sites\"]:\n            dcs.append(\"kurchatovskiy\")\n        if \"mesh\" in folder_lower:\n            dcs.append(\"mesh\")\n        if \"moshub\" in folder_lower:\n            dcs.append(\"moshub_rus\")\n        if \"metro\" in folder_lower:\n            if \"_kor_\" in folder_lower:\n                dcs.append(\"top10_korovinskiy\")\n            else:\n                dcs.append(\"top10_kurchatovskiy\")\n        if \"ext\" in folder_lower:\n            if \"_kor_\" in folder_lower:\n                dcs.append(\"ext_korovinskiy\")\n            elif \"_nag_\" in folder_lower:\n                dcs.append(\"ext_nagornaya\")\n            else:\n                dcs.append(\"ext_kurchatovskiy\")\n        return list(set(dcs))\n\n    # ==========================================\n    # СКАНИРОВАНИЕ YML\n    # ==========================================\n    def _scan_yml_file(self, yml_file: str, target_domains: List[str]) -> List[Dict]:\n        \"\"\"Сканирует один YML файл и находит совпадения по server_name\"\"\"\n        results = []\n        try:\n            with open(yml_file, 'r', encoding='utf-8') as f:\n                config_text = f.read()\n                config_yaml = yaml.safe_load(config_text)\n            if not config_yaml:\n                return results\n            for config_key, config_block in config_yaml.items():\n                server_names = self._extract_server_names(config_block)\n                if not server_names:\n                    continue\n                matching_domains = []\n                for target_domain in target_domains:\n                    if self._is_domain_match(target_domain, server_names):\n                        matching_domains.append(target_domain)\n                if matching_domains:\n                    result = {\n                        \"config_key\": config_key,\n                        \"config_file\": yml_file,\n                        \"server_names\": server_names,\n                        \"matching_domains\": matching_domains,\n                        \"full_config_text\": config_text,\n                        \"parsed_yaml\": config_yaml,\n                        \"config_block\": config_block\n                    }\n                    results.append(result)\n        except yaml.YAMLError as e:\n            print(f\"⚠️ Ошибка чтения YAML {yml_file}: {e}\")\n        except Exception as e:\n            print(f\"⚠️ Ошибка обработки {yml_file}: {e}\")\n        return results\n\n    def _extract_server_names(self, config_block: Any) -> List[str]:\n        \"\"\"Извлекает все server_name из конфигурационного блока\"\"\"\n        server_names = []\n        if isinstance(config_block, list):\n            for item in config_block:\n                if isinstance(item, str) and item.startswith(\"server_name \"):\n                    server_name_part = item.replace(\"server_name \", \"\").strip()\n                    names = [n.strip() for n in server_name_part.split() if n.strip()]\n                    server_names.extend(names)\n        return list(set(server_names))\n\n    def _is_domain_match(self, target_domain: str, server_names: List[str]) -> bool:\n        \"\"\"Проверяет, совпадает ли target_domain с любым server_name\"\"\"\n        target_domain = target_domain.strip().lower()\n        for server_name in server_names:\n            server_name = server_name.strip().lower()\n            if server_name == target_domain:\n                return True\n            if server_name.startswith(\"~^\") and server_name.endswith(\"$\"):\n                pattern = server_name[2:-1]\n                try:\n                    if re.match(pattern, target_domain):\n                        return True\n                except re.error:\n                    continue\n        return False\n\n    def _deduplicate_results(self, results: List[Dict]) -> List[Dict]:\n        \"\"\"Удаляет дубликаты результатов\"\"\"\n        seen = set()\n        unique = []\n        for result in results:\n            key = (result[\"config_file\"], result[\"config_key\"])\n            if key not in seen:\n                seen.add(key)\n                unique.append(result)\n        return unique\n\n    # ==========================================\n    # ОБРАБОТКА ОШИБОК\n    # ==========================================\n    def _return_error_status(self, status: Dict, agent1_data: Any) -> Data:\n        \"\"\"Возвращает ошибку из статуса\"\"\"\n        error_result = {\n            \"status\": \"error\",\n            \"error_type\": status.get(\"error_type\", \"UNKNOWN_ERROR\"),\n            \"error_message\": status.get(\"error_message\", \"Unknown error\"),\n            \"explanation\": status.get(\"explanation\", \"\"),\n            \"warnings\": status.get(\"warnings\", []),\n            \"missing_fields\": status.get(\"missing_fields\", []),\n            \"clarification_questions\": status.get(\"clarification_questions\", []),\n            \"agent1_data\": agent1_data,\n            \"config_file\": \"N/A\",\n            \"config_key\": \"N/A\",\n            \"full_config_text\": f\"# Error: {status.get('error_message')}\",\n            \"data_complete\": False,\n            # 🆕 Добавляем ключи даже в ошибку для консистентности\n            \"found_in_multiple_dc\": False,\n            \"dc_count\": 0,\n            \"unique_dcs\": [],\n            \"domain_dc_mapping\": {},\n            \"domains_in_multiple_dc\": []\n        }\n        questions = status.get(\"clarification_questions\", [])\n        missing = status.get(\"missing_fields\", [])\n\n        error_msg = f\"\"\"❌ **Ошибка**\n🔴 **Тип:** {status.get('error_type')}\n📝 **Сообщение:** {status.get('error_message')}\n\"\"\"\n        if missing:\n            error_msg += f\"\\n📋 **Не хватает:** {', '.join(missing[:3])}\"\n        if questions:\n            error_msg += f\"\\n❓ **Вопросы:** {questions[0]}\"\n        return Data(data=error_result, text=error_msg)\n\n    def _return_no_domains_error(self, agent1_data: Any, locations: List[str],\n                                 ip_addresses: List[str], parameters: Dict,\n                                 operation: Optional[str]) -> Data:\n        \"\"\"Возвращает ошибку об отсутствии доменов\"\"\"\n        error_result = {\n            \"status\": \"error\",\n            \"error_type\": \"NO_DOMAINS\",\n            \"error_message\": \"Домены не найдены в данных\",\n            \"agent1_data\": agent1_data,\n            \"operation\": operation,\n            \"locations\": locations,\n            \"ip_addresses\": ip_addresses,\n            \"parameters\": parameters,\n            \"config_file\": \"N/A\",\n            \"config_key\": \"N/A\",\n            \"full_config_text\": \"# Error: No domains specified\",\n            \"data_complete\": False,\n            # 🆕 Добавляем ключи даже в ошибку для консистентности\n            \"found_in_multiple_dc\": False,\n            \"dc_count\": 0,\n            \"unique_dcs\": [],\n            \"domain_dc_mapping\": {},\n            \"domains_in_multiple_dc\": []\n        }\n        error_msg = f\"\"\"❌ **Ошибка: домен не указан**\n📋 **Что извлечено:**\n- Operation: {operation or 'N/A'}\n- Locations: {', '.join(locations[:3]) if locations else 'N/A'}\n- IPs: {', '.join(ip_addresses[:3]) if ip_addresses else 'N/A'}\n💡 Укажите домен явно в запросе.\n\"\"\"\n        return Data(data=error_result, text=error_msg)\n\n    def _return_not_found_error(self, domains: List[str], scanned_files: int,\n                                agent1_data: Any, locations: List[str],\n                                ip_addresses: List[str], parameters: Dict,\n                                operation: Optional[str]) -> Data:\n        \"\"\"Возвращает ошибку о ненайденной конфигурации\"\"\"\n        not_found_result = {\n            \"status\": \"not_found\",\n            \"error_type\": \"CONFIG_NOT_FOUND\",\n            \"error_message\": f\"Конфигурация не найдена для: {', '.join(domains)}\",\n            \"domains\": domains,\n            \"scanned_files\": scanned_files,\n            \"agent1_data\": agent1_data,\n            \"operation\": operation,\n            \"locations\": locations,\n            \"ip_addresses\": ip_addresses,\n            \"parameters\": parameters,\n            \"config_file\": \"N/A\",\n            \"config_key\": \"N/A\",\n            \"full_config_text\": f\"# Error: Config not found for: {', '.join(domains)}\",\n            \"data_complete\": False,\n            # 🆕 Добавляем ключи даже в ошибку для консистентности\n            \"found_in_multiple_dc\": False,\n            \"dc_count\": 0,\n            \"unique_dcs\": [],\n            \"domain_dc_mapping\": {},\n            \"domains_in_multiple_dc\": []\n        }\n        error_msg = f\"\"\"❌ **Конфигурация не найдена**\n🔍 **Домены:** {', '.join(domains)}\n📊 **Просканировано:** {scanned_files} файлов\n\"\"\"\n        return Data(data=not_found_result, text=error_msg)\n\n    def _return_json_error(self, error: Exception, raw_json: str) -> Data:\n        \"\"\"Возвращает ошибку парсинга JSON\"\"\"\n        error_result = {\n            \"status\": \"error\",\n            \"error_type\": \"JSON_PARSE_ERROR\",\n            \"error_message\": f\"Ошибка парсинга JSON: {str(error)}\",\n            \"raw_input\": raw_json[:500],\n            \"config_file\": \"N/A\",\n            \"config_key\": \"N/A\",\n            \"full_config_text\": f\"# Error: JSON parse error\",\n            \"data_complete\": False,\n            # 🆕 Добавляем ключи даже в ошибку для консистентности\n            \"found_in_multiple_dc\": False,\n            \"dc_count\": 0,\n            \"unique_dcs\": [],\n            \"domain_dc_mapping\": {},\n            \"domains_in_multiple_dc\": []\n        }\n        return Data(data=error_result, text=f\"❌ **Ошибка парсинга JSON**\\n\\n{str(error)}\")\n\n    def _return_unexpected_error(self, error: Exception) -> Data:\n        \"\"\"Возвращает неожиданную ошибку\"\"\"\n        import traceback\n        error_result = {\n            \"status\": \"error\",\n            \"error_type\": \"UNEXPECTED_ERROR\",\n            \"error_message\": f\"Неожиданная ошибка: {str(error)}\",\n            \"traceback\": traceback.format_exc(),\n            \"config_file\": \"N/A\",\n            \"config_key\": \"N/A\",\n            \"full_config_text\": f\"# Error: {str(error)}\",\n            \"data_complete\": False,\n            # 🆕 Добавляем ключи даже в ошибку для консистентности\n            \"found_in_multiple_dc\": False,\n            \"dc_count\": 0,\n            \"unique_dcs\": [],\n            \"domain_dc_mapping\": {},\n            \"domains_in_multiple_dc\": []\n        }\n        print(f\"❌ UNEXPECTED ERROR: {str(error)}\")\n        traceback.print_exc()\n        return Data(data=error_result, text=f\"❌ **Неожиданная ошибка**\\n\\n{str(error)}\")\n\n    # ==========================================\n    # ФОРМАТИРОВАНИЕ РЕЗУЛЬТАТА\n    # ==========================================\n    def _format_success_message(self, result: Dict) -> str:\n        \"\"\"Формирует читаемое сообщение о результате\"\"\"\n        all_configs = result.get(\"all_configs\", [])\n        found_configs = len(all_configs)\n        scanned_files = result.get(\"scanned_files\", 0)\n        operation = result.get(\"operation\")\n        locations = result.get(\"locations\", [])\n        upstreams = result.get(\"upstreams\", [])\n        location_parameters = result.get(\"location_parameters\", [])\n        selected_dc = result.get(\"selected_dc\", [])\n\n        # 🆕 Новые данные о multi-DC\n        found_in_multiple_dc = result.get(\"found_in_multiple_dc\", False)\n        dc_count = result.get(\"dc_count\", 0)\n        unique_dcs = result.get(\"unique_dcs\", [])\n        domains_in_multiple_dc = result.get(\"domains_in_multiple_dc\", [])\n        domain_dc_mapping = result.get(\"domain_dc_mapping\", {})\n\n        msg = f\"✅ **Найдено {found_configs} конфигурац{'ия' if found_configs == 1 else 'ий' if 2 <= found_configs <= 4 else 'ий'}**\\n\\n\"\n\n        # 🆕 Предупреждение о нескольких ЦОД\n        if found_in_multiple_dc:\n            msg += f\"⚠️ **ВНИМАНИЕ: Домен найден в {dc_count} ЦОД!**\\n\"\n            msg += f\"🏢 **ЦОД:** {', '.join(unique_dcs)}\\n\"\n            if domains_in_multiple_dc:\n                msg += f\"🌐 **Домены в нескольких ЦОД:** {', '.join(domains_in_multiple_dc)}\\n\"\n            msg += \"\\n\"\n\n        for i, cfg in enumerate(all_configs):\n            if i > 0:\n                msg += \"\\n\" + (\"-\" * 40) + \"\\n\\n\"\n            msg += f\"📁 **Файл:** `{os.path.basename(cfg['config_file'])}`\\n\"\n            server_names = cfg.get(\"server_names\", [])\n            msg += f\"🌐 **Server names:** {', '.join(server_names[:3])}{'...' if len(server_names) > 3 else ''}\\n\"\n            matching_domains = cfg.get(\"matching_domains\", [])\n            msg += f\"✅ **Совпадения:** {', '.join(matching_domains)}\\n\"\n            inferred_dc = cfg.get(\"inferred_dc\", [])\n            if inferred_dc:\n                msg += f\"🏢 **DC:** {', '.join(inferred_dc)}\\n\"\n            else:\n                msg += f\"🏢 **DC:** N/A\\n\"\n\n        msg += f\"\\n📊 **Просканировано:** {scanned_files} файлов\"\n\n        if selected_dc:\n            msg += f\"\\n🗺 **Selected DC:** {', '.join(selected_dc)}\"\n        if operation:\n            msg += f\"\\n🔄 **Operation:** {operation}\"\n        if locations:\n            msg += f\"\\n📍 **Locations:** {', '.join(locations[:5])}\"\n        if upstreams:\n            for up in upstreams[:2]:\n                ips = up.get(\"ip_addresses\", [])\n                up_type = up.get(\"type\", \"unknown\")\n                msg += f\"\\n🔗 **Upstream ({up_type}):** {', '.join(ips[:3])}\"\n        if location_parameters:\n            msg += f\"\\n⚙️ **Location params:** {len(location_parameters)} записей\"\n\n        # 🆕 Расширенное примечание\n        if found_in_multiple_dc:\n            msg += \"\\n\\n⚠️ **ВАЖНО:** Конфигурация найдена в нескольких ЦОД. \"\n            msg += \"Убедитесь, что изменения применяются ко всем необходимым площадкам!\"\n            # Детальный маппинг\n            if domain_dc_mapping:\n                msg += \"\\n\\n📋 **Детали по доменам:**\"\n                for domain, dcs in domain_dc_mapping.items():\n                    if len(dcs) > 1:\n                        msg += f\"\\n  • `{domain}` → {', '.join(dcs)}\"\n        elif found_configs > 1:\n            msg += \"\\n\\nℹ️ **Примечание:** Найдено несколько конфигураций. Проверьте все варианты.\"\n\n        return msg\n"
+              },
+              "config_base_path": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Config Base Path",
+                "dynamic": false,
+                "info": "Путь к родительской папке с конфигами (например, /path/to/mos_ru_nginx/)",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "config_base_path",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "/Users/rusk/PycharmProjects/fastapi/portalFastDjango/mosru_nginx/mos_ru_nginx/production_kor_sites"
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "config_file_path",
+          "showNode": true,
+          "type": "UniversalSearchConfigComponent"
+        },
+        "dragging": false,
+        "id": "UniversalSearchConfigComponent-u7ief",
+        "measured": {
+          "height": 317,
+          "width": 320
+        },
+        "position": {
+          "x": 444.59719699456537,
+          "y": 713.5723454126506
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ParserComponent-6T9YF",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Extracts text using a template.",
+            "display_name": "Parser",
+            "documentation": "https://docs.langflow.org/components-processing#parser",
+            "edited": false,
+            "field_order": [
+              "input_data",
+              "mode",
+              "pattern",
+              "sep"
+            ],
+            "frozen": false,
+            "icon": "braces",
+            "legacy": false,
+            "lf_version": "1.6.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Parsed Text",
+                "group_outputs": false,
+                "method": "parse_combined_text",
+                "name": "parsed_text",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom.custom_component.component import Component\nfrom langflow.helpers.data import safe_convert\nfrom langflow.inputs.inputs import BoolInput, HandleInput, MessageTextInput, MultilineInput, TabInput\nfrom langflow.schema.data import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.message import Message\nfrom langflow.template.field.base import Output\n\n\nclass ParserComponent(Component):\n    display_name = \"Parser\"\n    description = \"Extracts text using a template.\"\n    documentation: str = \"https://docs.langflow.org/components-processing#parser\"\n    icon = \"braces\"\n\n    inputs = [\n        HandleInput(\n            name=\"input_data\",\n            display_name=\"Data or DataFrame\",\n            input_types=[\"DataFrame\", \"Data\"],\n            info=\"Accepts either a DataFrame or a Data object.\",\n            required=True,\n        ),\n        TabInput(\n            name=\"mode\",\n            display_name=\"Mode\",\n            options=[\"Parser\", \"Stringify\"],\n            value=\"Parser\",\n            info=\"Convert into raw string instead of using a template.\",\n            real_time_refresh=True,\n        ),\n        MultilineInput(\n            name=\"pattern\",\n            display_name=\"Template\",\n            info=(\n                \"Use variables within curly brackets to extract column values for DataFrames \"\n                \"or key values for Data.\"\n                \"For example: `Name: {Name}, Age: {Age}, Country: {Country}`\"\n            ),\n            value=\"Text: {text}\",  # Example default\n            dynamic=True,\n            show=True,\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"sep\",\n            display_name=\"Separator\",\n            advanced=True,\n            value=\"\\n\",\n            info=\"String used to separate rows/items.\",\n        ),\n    ]\n\n    outputs = [\n        Output(\n            display_name=\"Parsed Text\",\n            name=\"parsed_text\",\n            info=\"Formatted text output.\",\n            method=\"parse_combined_text\",\n        ),\n    ]\n\n    def update_build_config(self, build_config, field_value, field_name=None):\n        \"\"\"Dynamically hide/show `template` and enforce requirement based on `stringify`.\"\"\"\n        if field_name == \"mode\":\n            build_config[\"pattern\"][\"show\"] = self.mode == \"Parser\"\n            build_config[\"pattern\"][\"required\"] = self.mode == \"Parser\"\n            if field_value:\n                clean_data = BoolInput(\n                    name=\"clean_data\",\n                    display_name=\"Clean Data\",\n                    info=(\n                        \"Enable to clean the data by removing empty rows and lines \"\n                        \"in each cell of the DataFrame/ Data object.\"\n                    ),\n                    value=True,\n                    advanced=True,\n                    required=False,\n                )\n                build_config[\"clean_data\"] = clean_data.to_dict()\n            else:\n                build_config.pop(\"clean_data\", None)\n\n        return build_config\n\n    def _clean_args(self):\n        \"\"\"Prepare arguments based on input type.\"\"\"\n        input_data = self.input_data\n\n        match input_data:\n            case list() if all(isinstance(item, Data) for item in input_data):\n                msg = \"List of Data objects is not supported.\"\n                raise ValueError(msg)\n            case DataFrame():\n                return input_data, None\n            case Data():\n                return None, input_data\n            case dict() if \"data\" in input_data:\n                try:\n                    if \"columns\" in input_data:  # Likely a DataFrame\n                        return DataFrame.from_dict(input_data), None\n                    # Likely a Data object\n                    return None, Data(**input_data)\n                except (TypeError, ValueError, KeyError) as e:\n                    msg = f\"Invalid structured input provided: {e!s}\"\n                    raise ValueError(msg) from e\n            case _:\n                msg = f\"Unsupported input type: {type(input_data)}. Expected DataFrame or Data.\"\n                raise ValueError(msg)\n\n    def parse_combined_text(self) -> Message:\n        \"\"\"Parse all rows/items into a single text or convert input to string if `stringify` is enabled.\"\"\"\n        # Early return for stringify option\n        if self.mode == \"Stringify\":\n            return self.convert_to_string()\n\n        df, data = self._clean_args()\n\n        lines = []\n        if df is not None:\n            for _, row in df.iterrows():\n                formatted_text = self.pattern.format(**row.to_dict())\n                lines.append(formatted_text)\n        elif data is not None:\n            formatted_text = self.pattern.format(**data.data)\n            lines.append(formatted_text)\n\n        combined_text = self.sep.join(lines)\n        self.status = combined_text\n        return Message(text=combined_text)\n\n    def convert_to_string(self) -> Message:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        result = \"\"\n        if isinstance(self.input_data, list):\n            result = \"\\n\".join([safe_convert(item, clean_data=self.clean_data or False) for item in self.input_data])\n        else:\n            result = safe_convert(self.input_data or False)\n        self.log(f\"Converted to string with length: {len(result)}\")\n\n        message = Message(text=result)\n        self.status = message\n        return message\n"
+              },
+              "input_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Data or DataFrame",
+                "dynamic": false,
+                "info": "Accepts either a DataFrame or a Data object.",
+                "input_types": [
+                  "DataFrame",
+                  "Data"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_data",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "mode": {
+                "_input_type": "TabInput",
+                "advanced": false,
+                "display_name": "Mode",
+                "dynamic": false,
+                "info": "Convert into raw string instead of using a template.",
+                "name": "mode",
+                "options": [
+                  "Parser",
+                  "Stringify"
+                ],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "tab",
+                "value": "Parser"
+              },
+              "pattern": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Template",
+                "dynamic": true,
+                "info": "Use variables within curly brackets to extract column values for DataFrames or key values for Data.For example: `Name: {Name}, Age: {Age}, Country: {Country}`",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "pattern",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "{text}"
+              },
+              "sep": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Separator",
+                "dynamic": false,
+                "info": "String used to separate rows/items.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sep",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "\n"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "ParserComponent"
+        },
+        "dragging": false,
+        "id": "ParserComponent-6T9YF",
+        "measured": {
+          "height": 327,
+          "width": 320
+        },
+        "position": {
+          "x": 1347.7913474667002,
+          "y": 894.7400138206834
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ChatOutput-crLPm",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "category": "input_output",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Display a chat message in the Playground.",
+            "display_name": "Chat Output",
+            "documentation": "https://docs.langflow.org/components-io#chat-output",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "data_template"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "key": "ChatOutput",
+            "legacy": false,
+            "metadata": {},
+            "minimized": true,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.003169567463043492,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from collections.abc import Generator\nfrom typing import Any\n\nimport orjson\nfrom fastapi.encoders import jsonable_encoder\n\nfrom langflow.base.io.chat import ChatComponent\nfrom langflow.helpers.data import safe_convert\nfrom langflow.inputs.inputs import BoolInput, DropdownInput, HandleInput, MessageTextInput\nfrom langflow.schema.data import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.message import Message\nfrom langflow.schema.properties import Source\nfrom langflow.template.field.base import Output\nfrom langflow.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_AI,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatOutput(ChatComponent):\n    display_name = \"Chat Output\"\n    description = \"Display a chat message in the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-output\"\n    icon = \"MessagesSquare\"\n    name = \"ChatOutput\"\n    minimized = True\n\n    inputs = [\n        HandleInput(\n            name=\"input_value\",\n            display_name=\"Inputs\",\n            info=\"Message to be passed as output.\",\n            input_types=[\"Data\", \"DataFrame\", \"Message\"],\n            required=True,\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_AI,\n            advanced=True,\n            info=\"Type of sender.\",\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_AI,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"data_template\",\n            display_name=\"Data Template\",\n            value=\"{text}\",\n            advanced=True,\n            info=\"Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.\",\n        ),\n    ]\n    outputs = [\n        Output(\n            display_name=\"Output Message\",\n            name=\"message\",\n            method=\"message_response\",\n        ),\n    ]\n\n    def _build_source(self, id_: str | None, display_name: str | None, source: str | None) -> Source:\n        source_dict = {}\n        if id_:\n            source_dict[\"id\"] = id_\n        if display_name:\n            source_dict[\"display_name\"] = display_name\n        if source:\n            # Handle case where source is a ChatOpenAI object\n            if hasattr(source, \"model_name\"):\n                source_dict[\"source\"] = source.model_name\n            elif hasattr(source, \"model\"):\n                source_dict[\"source\"] = str(source.model)\n            else:\n                source_dict[\"source\"] = str(source)\n        return Source(**source_dict)\n\n    async def message_response(self) -> Message:\n        # First convert the input to string if needed\n        text = self.convert_to_string()\n\n        # Get source properties\n        source, icon, display_name, source_id = self.get_properties_from_source_component()\n\n        # Create or use existing Message object\n        if isinstance(self.input_value, Message):\n            message = self.input_value\n            # Update message properties\n            message.text = text\n        else:\n            message = Message(text=text)\n\n        # Set message properties\n        message.sender = self.sender\n        message.sender_name = self.sender_name\n        message.session_id = self.session_id\n        message.flow_id = self.graph.flow_id if hasattr(self, \"graph\") else None\n        message.properties.source = self._build_source(source_id, display_name, source)\n\n        # Store message if needed\n        if self.session_id and self.should_store_message:\n            stored_message = await self.send_message(message)\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n\n    def _serialize_data(self, data: Data) -> str:\n        \"\"\"Serialize Data object to JSON string.\"\"\"\n        # Convert data.data to JSON-serializable format\n        serializable_data = jsonable_encoder(data.data)\n        # Serialize with orjson, enabling pretty printing with indentation\n        json_bytes = orjson.dumps(serializable_data, option=orjson.OPT_INDENT_2)\n        # Convert bytes to string and wrap in Markdown code blocks\n        return \"```json\\n\" + json_bytes.decode(\"utf-8\") + \"\\n```\"\n\n    def _validate_input(self) -> None:\n        \"\"\"Validate the input data and raise ValueError if invalid.\"\"\"\n        if self.input_value is None:\n            msg = \"Input data cannot be None\"\n            raise ValueError(msg)\n        if isinstance(self.input_value, list) and not all(\n            isinstance(item, Message | Data | DataFrame | str) for item in self.input_value\n        ):\n            invalid_types = [\n                type(item).__name__\n                for item in self.input_value\n                if not isinstance(item, Message | Data | DataFrame | str)\n            ]\n            msg = f\"Expected Data or DataFrame or Message or str, got {invalid_types}\"\n            raise TypeError(msg)\n        if not isinstance(\n            self.input_value,\n            Message | Data | DataFrame | str | list | Generator | type(None),\n        ):\n            type_name = type(self.input_value).__name__\n            msg = f\"Expected Data or DataFrame or Message or str, Generator or None, got {type_name}\"\n            raise TypeError(msg)\n\n    def convert_to_string(self) -> str | Generator[Any, None, None]:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        self._validate_input()\n        if isinstance(self.input_value, list):\n            clean_data: bool = getattr(self, \"clean_data\", False)\n            return \"\\n\".join([safe_convert(item, clean_data=clean_data) for item in self.input_value])\n        if isinstance(self.input_value, Generator):\n            return self.input_value\n        return safe_convert(self.input_value)\n"
+              },
+              "data_template": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Data Template",
+                "dynamic": false,
+                "info": "Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "data_template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "{text}"
+              },
+              "input_value": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Inputs",
+                "dynamic": false,
+                "info": "Message to be passed as output.",
+                "input_types": [
+                  "Data",
+                  "DataFrame",
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_value",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "sender": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Machine"
+              },
+              "sender_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sender_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "AI"
+              },
+              "session_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "session_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_store_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": false,
+          "type": "ChatOutput"
+        },
+        "dragging": false,
+        "id": "ChatOutput-crLPm",
+        "measured": {
+          "height": 48,
+          "width": 192
+        },
+        "position": {
+          "x": 1824.1362729958016,
+          "y": 1196.8578308981002
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ConfigBlockSplitter-gNsct",
+          "node": {
+            "base_classes": [
+              "Data",
+              "DataFrame"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Splits config blocks array into DataFrame for sequential Loop/LLM processing",
+            "display_name": "Config Block Splitter",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "selected_block"
+            ],
+            "frozen": false,
+            "icon": "split",
+            "legacy": false,
+            "lf_version": "1.6.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Config Items DataFrame",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_config_dataframe",
+                "name": "config_items_df",
+                "options": null,
+                "required_inputs": null,
+                "selected": "DataFrame",
+                "tool_mode": true,
+                "types": [
+                  "DataFrame"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Total Count",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_total_count",
+                "name": "total_count",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Metadata",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_metadata",
+                "name": "metadata",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom.custom_component.component import Component\nfrom langflow.inputs.inputs import HandleInput\nfrom langflow.schema.data import Data\nfrom langflow.schema.message import Message\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.template.field.base import Output\nimport json\nimport pandas as pd\nfrom typing import Union, List, Dict, Any\n\n\nclass ConfigBlockSplitter(Component):\n    \"\"\"\n    Splits normalized config blocks from LocationSelector into individual items for Loop processing.\n    Properly handles Message input from LocationSelectorFromUniversalSearch.\n    Converts selected_blocks array into DataFrame format suitable for Loop component.\n\n    NEW: Supports block-level warnings for unknown operations like MAKE_PROTECTED\n    \"\"\"\n\n    display_name = \"Config Block Splitter\"\n    description = \"Splits config blocks array into DataFrame for sequential Loop/LLM processing\"\n    documentation = \"\"\n    icon = \"split\"\n\n    inputs = [\n        HandleInput(\n            name=\"selected_block\",\n            display_name=\"Selected Block\",\n            input_types=[\"Message\", \"Data\", \"dict\"],\n            info=\"Output from LocationSelectorFromUniversalSearch containing selected_blocks\",\n            required=True,\n        ),\n    ]\n\n    outputs = [\n        Output(\n            display_name=\"Config Items DataFrame\",\n            name=\"config_items_df\",\n            info=\"DataFrame with individual config blocks for Loop processing\",\n            method=\"build_config_dataframe\",\n        ),\n        Output(\n            display_name=\"Total Count\",\n            name=\"total_count\",\n            info=\"Total number of config blocks to process\",\n            method=\"build_total_count\",\n        ),\n        Output(\n            display_name=\"Metadata\",\n            name=\"metadata\",\n            info=\"Additional metadata from the original response\",\n            method=\"build_metadata\",\n        ),\n    ]\n\n    def process_input_data(self, data: Union[Message, Data, dict, str]) -> dict:\n        \"\"\"Convert input to dictionary format - handles Message, Data, dict, and JSON string\"\"\"\n        try:\n            # Handle Message type (from LocationSelector)\n            if isinstance(data, Message):\n                text = data.text if hasattr(data, 'text') else str(data)\n                return json.loads(text)\n\n            # Handle Data type\n            elif isinstance(data, Data):\n                if hasattr(data, 'data'):\n                    data_content = data.data\n                    if isinstance(data_content, str):\n                        return json.loads(data_content)\n                    return data_content\n                elif hasattr(data, 'to_dict'):\n                    return data.to_dict()\n                else:\n                    return dict(data)\n\n            # Handle dict\n            elif isinstance(data, dict):\n                return data\n\n            # Handle JSON string\n            elif isinstance(data, str):\n                return json.loads(data)\n\n            else:\n                raise ValueError(f\"Unexpected input type: {type(data)}\")\n\n        except json.JSONDecodeError as e:\n            self.log(f\"JSON decode error: {str(e)}\")\n            raise ValueError(f\"Invalid JSON in input: {str(e)}\")\n        except Exception as e:\n            self.log(f\"Error processing input: {str(e)}\")\n            raise\n\n    def extract_config_blocks(self, input_data: dict) -> List[Dict[str, Any]]:\n        \"\"\"Extract selected_blocks array from input data\"\"\"\n        if 'selected_blocks' in input_data:\n            blocks = input_data['selected_blocks']\n            # Ensure it's a list\n            if isinstance(blocks, list):\n                return blocks\n            elif isinstance(blocks, dict):\n                # Single block wrapped in dict - convert to list\n                return [blocks]\n            else:\n                self.log(f\"Warning: selected_blocks is not a list or dict: {type(blocks)}\")\n                return []\n\n        # Fallback: try to find blocks in nested structure\n        if 'selected_block' in input_data:\n            block_data = input_data['selected_block']\n            if isinstance(block_data, list):\n                return block_data\n            elif isinstance(block_data, dict) and 'selected_blocks' in block_data:\n                return block_data['selected_blocks']\n\n        # If no selected_blocks found, return empty list\n        self.log(\"Warning: No selected_blocks found in input data\")\n        return []\n\n    def build_config_dataframe(self) -> DataFrame:\n        \"\"\"Convert selected_blocks array into DataFrame for Loop component\"\"\"\n        try:\n            # Process input data\n            input_data = self.process_input_data(self.selected_block)\n\n            # Check for errors in input\n            if 'error' in input_data and not input_data.get('selected_blocks'):\n                self.log(f\"Error in input data: {input_data.get('error')}\")\n                return DataFrame(pd.DataFrame(columns=['error'], data=[{'error': input_data.get('error')}]))\n\n            # Extract config blocks\n            config_blocks = self.extract_config_blocks(input_data)\n\n            # НОВОЕ: Извлекаем глобальные warnings\n            global_warnings = input_data.get('warnings', [])\n            if global_warnings:\n                self.log(f\"Found {len(global_warnings)} global warnings: {global_warnings}\")\n\n            if not config_blocks:\n                # Return empty DataFrame with expected structure\n                self.log(\"No config blocks found, returning empty DataFrame\")\n                return DataFrame(pd.DataFrame(columns=[\n                    'index', 'config_key', 'config_file', 'server_names',\n                    'location_path', 'operation', 'type', 'full_config_json'\n                ]))\n\n            # 🔥 НОВОЕ: Функция проверки на MULTI-DC warning\n            def has_multi_dc_warning(warnings_list: List[str]) -> bool:\n                \"\"\"Проверяет, содержится ли MULTI-DC warning в списке\"\"\"\n                if not warnings_list:\n                    return False\n                for warning in warnings_list:\n                    if isinstance(warning, str) and \"MULTI-DC: Domain found in\" in warning and \"datacenters\" in warning:\n                        return True\n                return False\n\n            # Prepare data for DataFrame\n            df_data = []\n            filtered_blocks = []  # 🔥 НОВОЕ: Собираем отфильтрованные блоки\n            filtered_count = 0\n\n            for idx, block in enumerate(config_blocks):\n                if not isinstance(block, dict):\n                    self.log(f\"Warning: Block {idx} is not a dict, skipping\")\n                    continue\n\n                # Объединяем warnings блока и глобальные warnings\n                block_warnings = block.get('warnings', [])\n                combined_warnings = []\n\n                # Определяем, содержит ли блок домены, которые находятся в нескольких ДЦ\n                domains_in_multi_dc = set(input_data.get(\"domains_in_multiple_dc\", []))\n                block_domains = block.get('matching_domains', [])\n                block_in_multi_dc = any(domain in domains_in_multi_dc for domain in block_domains)\n\n                # Добавляем глобальные warnings ТОЛЬКО если блок относится к multi-DC домену\n                if block_in_multi_dc and global_warnings:\n                    combined_warnings.extend(global_warnings)\n\n                # Добавляем warnings конкретного блока\n                if block_warnings:\n                    if isinstance(block_warnings, list):\n                        combined_warnings.extend(block_warnings)\n                    elif isinstance(block_warnings, str):\n                        combined_warnings.append(block_warnings)\n\n                # 🔥 ФИЛЬТРАЦИЯ: Пропускаем блоки с MULTI-DC warning\n                if has_multi_dc_warning(combined_warnings):\n                    filtered_count += 1\n                    filtered_blocks.append(block)  # 🔥 Сохраняем для информации\n                    self.log(\n                        f\"⚠️ Filtering out block {idx} ({block.get('location_path', 'unknown')}) - contains MULTI-DC warning\")\n                    continue\n\n                # Логируем для информации\n                if combined_warnings:\n                    self.log(\n                        f\"Block {idx} ({block.get('location_path', 'unknown')}): {len(combined_warnings)} warnings - {combined_warnings}\")\n\n                # Each row will contain the full block data\n                row = {\n                    'index': idx,\n                    'config_key': block.get('config_key', ''),\n                    'config_file': block.get('config_file', ''),\n                    'server_names': json.dumps(block.get('server_names', []), ensure_ascii=False),\n                    'matching_domains': json.dumps(block.get('matching_domains', []), ensure_ascii=False),\n                    'location_path': block.get('location_path', ''),\n                    'operation': block.get('operation', ''),\n                    'type': block.get('type', 'location'),\n                    'hash': block.get('hash', ''),\n\n                    # Arrays as JSON strings\n                    'directives': json.dumps(block.get('directives', []), ensure_ascii=False),\n                    'parameters': json.dumps(block.get('parameters', []), ensure_ascii=False),\n                    'existing_locations': json.dumps(block.get('existing_locations', []), ensure_ascii=False),\n                    'ip_addresses': json.dumps(block.get('ip_addresses', []), ensure_ascii=False),\n                    'upstreams': json.dumps(block.get('upstreams', []) if block.get('upstreams') else [],\n                                            ensure_ascii=False),\n\n                    'warnings': json.dumps(combined_warnings, ensure_ascii=False),\n\n                    # Boolean and special fields\n                    'kms_required': block.get('kms_required', False),\n                    'create_mode': block.get('create_mode', False),\n                    'delete_mode': block.get('delete_mode', False),\n\n                    # NEW: Support for MODIFY_LOCATION_PATH\n                    'new_location_path': block.get('new_location_path', ''),\n\n                    # Store complete block as JSON string for full context\n                    'full_config_json': json.dumps(block, ensure_ascii=False),\n                }\n                df_data.append(row)\n\n            # 🔥 НОВОЕ: Логируем статистику фильтрации\n            if filtered_count > 0:\n                self.log(\n                    f\"✅ Filtered out {filtered_count} blocks with MULTI-DC warnings. Remaining: {len(df_data)} blocks\")\n\n            # 🔥 НОВОЕ: Если все блоки отфильтрованы, создаём информативную строку\n            if not df_data:\n                self.log(\"No valid blocks after filtering, returning informative DataFrame\")\n\n                # Формируем список отфильтрованных доменов для информации\n                filtered_domains = []\n                for block in filtered_blocks:\n                    filtered_domains.extend(block.get('matching_domains', []))\n                filtered_domains = list(set(filtered_domains))  # Убираем дубликаты\n\n                # Создаём информативную строку вместо ошибки\n                info_row = {\n                    'index': 0,\n                    'config_key': 'FILTERED',\n                    'config_file': 'N/A',\n                    'server_names': json.dumps([], ensure_ascii=False),\n                    'matching_domains': json.dumps(filtered_domains, ensure_ascii=False),\n                    'location_path': 'N/A',\n                    'operation': input_data.get('operation', 'SKIP_MULTI_DC'),\n                    'type': 'filtered',\n                    'hash': '',\n                    'directives': json.dumps([], ensure_ascii=False),\n                    'parameters': json.dumps([], ensure_ascii=False),\n                    'existing_locations': json.dumps([], ensure_ascii=False),\n                    'ip_addresses': json.dumps([], ensure_ascii=False),\n                    'upstreams': json.dumps([], ensure_ascii=False),\n                    'warnings': json.dumps([\n                        f\"All {filtered_count} blocks filtered due to MULTI-DC warnings\",\n                        f\"Affected domains: {', '.join(filtered_domains)}\"\n                    ], ensure_ascii=False),\n                    'kms_required': False,\n                    'create_mode': False,\n                    'delete_mode': False,\n                    'new_location_path': '',\n                    'full_config_json': json.dumps({\n                        \"status\": \"filtered\",\n                        \"reason\": \"MULTI-DC domains detected\",\n                        \"filtered_count\": filtered_count,\n                        \"filtered_domains\": filtered_domains,\n                        \"original_operation\": input_data.get('operation', ''),\n                        \"message\": \"These domains exist in multiple datacenters. Manual intervention required.\"\n                    }, ensure_ascii=False)\n                }\n\n                df = pd.DataFrame([info_row])\n                self.log(f\"Returning informative DataFrame for {filtered_count} filtered blocks\")\n                return DataFrame(df)\n\n            # Create DataFrame\n            df = pd.DataFrame(df_data)\n\n            self.log(f\"Successfully created DataFrame with {len(df)} rows (filtered {filtered_count} MULTI-DC blocks)\")\n\n            # Return as langflow DataFrame\n            return DataFrame(df)\n\n        except Exception as e:\n            error_msg = f\"Error building DataFrame: {str(e)}\"\n            self.log(error_msg)\n            # Return DataFrame with error information\n            return DataFrame(pd.DataFrame(columns=['error'], data=[{'error': error_msg}]))\n\n    def build_total_count(self) -> Data:\n        \"\"\"Return total count of config blocks\"\"\"\n        try:\n            input_data = self.process_input_data(self.selected_block)\n            config_blocks = self.extract_config_blocks(input_data)\n\n            count_data = {\n                \"total_blocks\": len(config_blocks),\n                \"has_data\": len(config_blocks) > 0,\n                \"operation\": input_data.get(\"operation\", \"\"),\n                \"target_domains\": input_data.get(\"target_domains\", []),\n                \"locations_count\": input_data.get(\"locations_count\", 0),\n                \"warnings\": input_data.get(\"warnings\", [])\n            }\n\n            return Data(data=count_data)\n\n        except Exception as e:\n            error_msg = f\"Error getting total count: {str(e)}\"\n            self.log(error_msg)\n            return Data(data={\"total_blocks\": 0, \"has_data\": False, \"error\": error_msg})\n\n    def build_metadata(self) -> Data:\n        \"\"\"Extract and return metadata from the original response\"\"\"\n        try:\n            input_data = self.process_input_data(self.selected_block)\n\n            # Extract metadata fields\n            metadata = {\n                \"total_configs_scanned\": input_data.get(\"total_configs_scanned\", 0),\n                \"total_blocks_found\": input_data.get(\"total_blocks_found\", 0),\n                \"target_locations\": input_data.get(\"target_locations\", []),\n                \"target_domains\": input_data.get(\"target_domains\", []),\n                \"operation\": input_data.get(\"operation\", \"\"),\n                \"locations_count\": input_data.get(\"locations_count\", 0),\n                \"warnings\": input_data.get(\"warnings\", [])\n            }\n\n            # Add error if present\n            if 'error' in input_data:\n                metadata['error'] = input_data['error']\n\n            return Data(data=metadata)\n\n        except Exception as e:\n            error_msg = f\"Error extracting metadata: {str(e)}\"\n            self.log(error_msg)\n            return Data(data={\"error\": error_msg})"
+              },
+              "selected_block": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Selected Block",
+                "dynamic": false,
+                "info": "Output from LocationSelectorFromUniversalSearch containing selected_blocks",
+                "input_types": [
+                  "Message",
+                  "Data",
+                  "dict"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "selected_block",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "config_items_df",
+          "showNode": true,
+          "type": "ConfigBlockSplitter"
+        },
+        "dragging": false,
+        "id": "ConfigBlockSplitter-gNsct",
+        "measured": {
+          "height": 181,
+          "width": 320
+        },
+        "position": {
+          "x": 2420.3520461833923,
+          "y": 828.5194283138335
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ConditionalRouter-9f2ws",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "category": "logic",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Routes an input message to a corresponding output based on text comparison.",
+            "display_name": "If-Else",
+            "documentation": "https://docs.langflow.org/components-logic#conditional-router-if-else-component",
+            "edited": false,
+            "field_order": [
+              "input_text",
+              "operator",
+              "match_text",
+              "case_sensitive",
+              "true_case_message",
+              "false_case_message",
+              "max_iterations",
+              "default_route"
+            ],
+            "frozen": false,
+            "icon": "split",
+            "key": "ConditionalRouter",
+            "last_updated": "2025-11-28T06:12:00.551Z",
+            "legacy": false,
+            "lf_version": "1.6.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "True",
+                "group_outputs": true,
+                "method": "true_response",
+                "name": "true_result",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "False",
+                "group_outputs": true,
+                "method": "false_response",
+                "name": "false_result",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.001,
+            "template": {
+              "_type": "Component",
+              "case_sensitive": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Case Sensitive",
+                "dynamic": false,
+                "info": "If true, the comparison will be case sensitive.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "case_sensitive",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import re\n\nfrom langflow.custom.custom_component.component import Component\nfrom langflow.io import BoolInput, DropdownInput, IntInput, MessageInput, MessageTextInput, Output\nfrom langflow.schema.message import Message\n\n\nclass ConditionalRouterComponent(Component):\n    display_name = \"If-Else\"\n    description = \"Routes an input message to a corresponding output based on text comparison.\"\n    documentation: str = \"https://docs.langflow.org/components-logic#conditional-router-if-else-component\"\n    icon = \"split\"\n    name = \"ConditionalRouter\"\n\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.__iteration_updated = False\n\n    inputs = [\n        MessageTextInput(\n            name=\"input_text\",\n            display_name=\"Text Input\",\n            info=\"The primary text input for the operation.\",\n            required=True,\n        ),\n        DropdownInput(\n            name=\"operator\",\n            display_name=\"Operator\",\n            options=[\n                \"equals\",\n                \"not equals\",\n                \"contains\",\n                \"starts with\",\n                \"ends with\",\n                \"regex\",\n                \"less than\",\n                \"less than or equal\",\n                \"greater than\",\n                \"greater than or equal\",\n            ],\n            info=\"The operator to apply for comparing the texts.\",\n            value=\"equals\",\n            real_time_refresh=True,\n        ),\n        MessageTextInput(\n            name=\"match_text\",\n            display_name=\"Match Text\",\n            info=\"The text input to compare against.\",\n            required=True,\n        ),\n        BoolInput(\n            name=\"case_sensitive\",\n            display_name=\"Case Sensitive\",\n            info=\"If true, the comparison will be case sensitive.\",\n            value=True,\n            advanced=True,\n        ),\n        MessageInput(\n            name=\"true_case_message\",\n            display_name=\"Case True\",\n            info=\"The message to pass if the condition is True.\",\n            advanced=True,\n        ),\n        MessageInput(\n            name=\"false_case_message\",\n            display_name=\"Case False\",\n            info=\"The message to pass if the condition is False.\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"max_iterations\",\n            display_name=\"Max Iterations\",\n            info=\"The maximum number of iterations for the conditional router.\",\n            value=10,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"default_route\",\n            display_name=\"Default Route\",\n            options=[\"true_result\", \"false_result\"],\n            info=\"The default route to take when max iterations are reached.\",\n            value=\"false_result\",\n            advanced=True,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"True\", name=\"true_result\", method=\"true_response\", group_outputs=True),\n        Output(display_name=\"False\", name=\"false_result\", method=\"false_response\", group_outputs=True),\n    ]\n\n    def _pre_run_setup(self):\n        self.__iteration_updated = False\n\n    def evaluate_condition(self, input_text: str, match_text: str, operator: str, *, case_sensitive: bool) -> bool:\n        if not case_sensitive and operator != \"regex\":\n            input_text = input_text.lower()\n            match_text = match_text.lower()\n\n        if operator == \"equals\":\n            return input_text == match_text\n        if operator == \"not equals\":\n            return input_text != match_text\n        if operator == \"contains\":\n            return match_text in input_text\n        if operator == \"starts with\":\n            return input_text.startswith(match_text)\n        if operator == \"ends with\":\n            return input_text.endswith(match_text)\n        if operator == \"regex\":\n            try:\n                return bool(re.match(match_text, input_text))\n            except re.error:\n                return False  # Return False if the regex is invalid\n        if operator in [\"less than\", \"less than or equal\", \"greater than\", \"greater than or equal\"]:\n            try:\n                input_num = float(input_text)\n                match_num = float(match_text)\n                if operator == \"less than\":\n                    return input_num < match_num\n                if operator == \"less than or equal\":\n                    return input_num <= match_num\n                if operator == \"greater than\":\n                    return input_num > match_num\n                if operator == \"greater than or equal\":\n                    return input_num >= match_num\n            except ValueError:\n                return False  # Invalid number format for comparison\n        return False\n\n    def iterate_and_stop_once(self, route_to_stop: str):\n        \"\"\"Handles cycle iteration counting and branch exclusion.\n\n        Uses two complementary mechanisms:\n        1. stop() - ACTIVE/INACTIVE state for cycle management (gets reset each iteration)\n        2. exclude_branch_conditionally() - Persistent exclusion for conditional routing\n\n        When max_iterations is reached, breaks the cycle by allowing the default_route to execute.\n        \"\"\"\n        if not self.__iteration_updated:\n            self.update_ctx({f\"{self._id}_iteration\": self.ctx.get(f\"{self._id}_iteration\", 0) + 1})\n            self.__iteration_updated = True\n            current_iteration = self.ctx.get(f\"{self._id}_iteration\", 0)\n\n            # Check if max iterations reached and we're trying to stop the default route\n            if current_iteration >= self.max_iterations and route_to_stop == self.default_route:\n                # Clear ALL conditional exclusions to allow default route to execute\n                if self._id in self.graph.conditional_exclusion_sources:\n                    previous_exclusions = self.graph.conditional_exclusion_sources[self._id]\n                    self.graph.conditionally_excluded_vertices -= previous_exclusions\n                    del self.graph.conditional_exclusion_sources[self._id]\n\n                # Switch which route to stop - stop the NON-default route to break the cycle\n                route_to_stop = \"true_result\" if route_to_stop == \"false_result\" else \"false_result\"\n\n                # Call stop to break the cycle\n                self.stop(route_to_stop)\n                # Don't apply conditional exclusion when breaking cycle\n                return\n\n            # Normal case: Use BOTH mechanisms\n            # 1. stop() for cycle management (marks INACTIVE, updates run manager, gets reset)\n            self.stop(route_to_stop)\n\n            # 2. Conditional exclusion for persistent routing (doesn't get reset except by this router)\n            self.graph.exclude_branch_conditionally(self._id, output_name=route_to_stop)\n\n    def true_response(self) -> Message:\n        result = self.evaluate_condition(\n            self.input_text, self.match_text, self.operator, case_sensitive=self.case_sensitive\n        )\n\n        # Check if we should force output due to max_iterations on default route\n        current_iteration = self.ctx.get(f\"{self._id}_iteration\", 0)\n        force_output = current_iteration >= self.max_iterations and self.default_route == \"true_result\"\n\n        if result or force_output:\n            self.status = self.true_case_message\n            if not force_output:  # Only stop the other branch if not forcing due to max iterations\n                self.iterate_and_stop_once(\"false_result\")\n            return self.true_case_message\n        self.iterate_and_stop_once(\"true_result\")\n        return Message(content=\"\")\n\n    def false_response(self) -> Message:\n        result = self.evaluate_condition(\n            self.input_text, self.match_text, self.operator, case_sensitive=self.case_sensitive\n        )\n\n        if not result:\n            self.status = self.false_case_message\n            self.iterate_and_stop_once(\"true_result\")\n            return self.false_case_message\n\n        self.iterate_and_stop_once(\"false_result\")\n        return Message(content=\"\")\n\n    def update_build_config(self, build_config: dict, field_value: str, field_name: str | None = None) -> dict:\n        if field_name == \"operator\":\n            if field_value == \"regex\":\n                build_config.pop(\"case_sensitive\", None)\n            elif \"case_sensitive\" not in build_config:\n                case_sensitive_input = next(\n                    (input_field for input_field in self.inputs if input_field.name == \"case_sensitive\"), None\n                )\n                if case_sensitive_input:\n                    build_config[\"case_sensitive\"] = case_sensitive_input.to_dict()\n        return build_config\n"
+              },
+              "default_route": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Default Route",
+                "dynamic": false,
+                "external_options": {},
+                "info": "The default route to take when max iterations are reached.",
+                "name": "default_route",
+                "options": [
+                  "true_result",
+                  "false_result"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "false_result"
+              },
+              "false_case_message": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Case False",
+                "dynamic": false,
+                "info": "The message to pass if the condition is False.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "false_case_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "input_text": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Text Input",
+                "dynamic": false,
+                "info": "The primary text input for the operation.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_text",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "match_text": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Match Text",
+                "dynamic": false,
+                "info": "The text input to compare against.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "match_text",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "\"error\""
+              },
+              "max_iterations": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Max Iterations",
+                "dynamic": false,
+                "info": "The maximum number of iterations for the conditional router.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "max_iterations",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 10
+              },
+              "operator": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Operator",
+                "dynamic": false,
+                "external_options": {},
+                "info": "The operator to apply for comparing the texts.",
+                "name": "operator",
+                "options": [
+                  "equals",
+                  "not equals",
+                  "contains",
+                  "starts with",
+                  "ends with",
+                  "regex",
+                  "less than",
+                  "less than or equal",
+                  "greater than",
+                  "greater than or equal"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "contains"
+              },
+              "true_case_message": {
+                "_input_type": "MessageInput",
+                "advanced": true,
+                "display_name": "Case True",
+                "dynamic": false,
+                "info": "The message to pass if the condition is True.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "true_case_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "ConditionalRouter"
+        },
+        "dragging": false,
+        "id": "ConditionalRouter-9f2ws",
+        "measured": {
+          "height": 509,
+          "width": 320
+        },
+        "position": {
+          "x": 1887.1184605609835,
+          "y": 497.6740792465955
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "TextInput-ob9bg",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "category": "input_output",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get user text inputs.",
+            "display_name": "Text Input",
+            "documentation": "https://docs.langflow.org/components-io#text-input",
+            "edited": false,
+            "field_order": [
+              "input_value"
+            ],
+            "frozen": false,
+            "icon": "type",
+            "key": "TextInput",
+            "legacy": false,
+            "lf_version": "1.6.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output Text",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.00004500241402777085,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.io.text import TextComponent\nfrom langflow.io import MultilineInput, Output\nfrom langflow.schema.message import Message\n\n\nclass TextInputComponent(TextComponent):\n    display_name = \"Text Input\"\n    description = \"Get user text inputs.\"\n    documentation: str = \"https://docs.langflow.org/components-io#text-input\"\n    icon = \"type\"\n    name = \"TextInput\"\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Text\",\n            info=\"Text to be passed as input.\",\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Output Text\", name=\"text\", method=\"text_response\"),\n    ]\n\n    def text_response(self) -> Message:\n        return Message(\n            text=self.input_value,\n        )\n"
+              },
+              "input_value": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Text",
+                "dynamic": false,
+                "info": "Text to be passed as input.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "TextInput"
+        },
+        "dragging": false,
+        "id": "TextInput-ob9bg",
+        "measured": {
+          "height": 203,
+          "width": 320
+        },
+        "position": {
+          "x": -172.61319975018338,
+          "y": 735.0638309855796
+        },
+        "selected": false,
+        "type": "genericNode"
+      }
+    ],
+    "viewport": {
+      "x": 295.30007863505614,
+      "y": 57.66633807458368,
+      "zoom": 0.5909544620191723
+    }
+  },
+  "description": "Empowering Language Engineering.",
+  "endpoint_name": null,
+  "id": "f29f03b3-877b-40a1-aa10-add2498b140b",
+  "is_component": false,
+  "last_tested_version": "1.6.0",
+  "name": "Yaml Sub Locations",
+  "tags": []
+}
