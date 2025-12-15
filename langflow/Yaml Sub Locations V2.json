@@ -1902,6 +1902,34 @@
         "sourceHandle": "{œdataTypeœ:œUniversalSearchConfigComponentœ,œidœ:œUniversalSearchConfigComponent-RvEQ1œ,œnameœ:œconfig_dataœ,œoutput_typesœ:[œDataœ]}",
         "target": "UpstreamExtractorComponent-LZc0P",
         "targetHandle": "{œfieldNameœ:œconfig_dataœ,œidœ:œUpstreamExtractorComponent-LZc0Pœ,œinputTypesœ:[œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ParserComponent",
+            "id": "ParserComponent-xTkpM",
+            "name": "parsed_text",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "llm_responses",
+            "id": "CustomComponent-dqFNm",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__ParserComponent-xTkpM{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-xTkpMœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-CustomComponent-dqFNm{œfieldNameœ:œllm_responsesœ,œidœ:œCustomComponent-dqFNmœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ParserComponent-xTkpM",
+        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-xTkpMœ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "CustomComponent-dqFNm",
+        "targetHandle": "{œfieldNameœ:œllm_responsesœ,œidœ:œCustomComponent-dqFNmœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
       }
     ],
     "nodes": [
@@ -8341,7 +8369,7 @@
           "x": 10200.601340074672,
           "y": 3063.595921567826
         },
-        "selected": true,
+        "selected": false,
         "type": "genericNode"
       },
       {
@@ -10761,12 +10789,266 @@
         },
         "selected": false,
         "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "CustomComponent-dqFNm",
+          "node": {
+            "base_classes": [
+              "Data",
+              "Text"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Собирает YAML конфиг Nginx upstreams. Поддерживает ADD/MODIFY/DELETE операции над апстримами.",
+            "display_name": "Nginx Upstream Assembler",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "llm_responses",
+              "source_file",
+              "output_dir",
+              "upstream_name",
+              "is_final",
+              "clear_cache"
+            ],
+            "frozen": false,
+            "icon": "server",
+            "legacy": false,
+            "lf_version": "1.6.0",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_output",
+                "name": "output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "YAML String",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "get_yaml_string",
+                "name": "yaml_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Text",
+                "tool_mode": true,
+                "types": [
+                  "Text"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "All Changes",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "get_all_changes",
+                "name": "all_changes",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "clear_cache": {
+                "_input_type": "BoolInput",
+                "advanced": false,
+                "display_name": "Clear Cache",
+                "dynamic": false,
+                "info": "Очистить кэш перед обработкой",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "clear_cache",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom.custom_component.component import Component\nfrom langflow.io import MessageTextInput, Output, BoolInput\nfrom langflow.schema.data import Data\nimport json\nimport re\nfrom pathlib import Path\nfrom typing import List, Dict, Any, Tuple, Optional\nimport yaml\nimport hashlib\nimport copy\n\n\nclass MyDumper(yaml.Dumper):\n    \"\"\"Custom YAML dumper for better formatting\"\"\"\n    def increase_indent(self, flow=False, indentless=False):\n        return super(MyDumper, self).increase_indent(flow, False)\n\n\nclass NginxUpstreamAssembler(Component):\n    display_name = \"Nginx Upstream Assembler\"\n    description = \"Собирает YAML конфиг Nginx upstreams. Поддерживает ADD/MODIFY/DELETE операции над апстримами.\"\n    icon = \"server\"\n    name = \"NginxUpstreamAssembler\"\n\n    # Хранилище для накопления изменений между вызовами\n    _config_cache: Dict[str, Dict[str, Any]] = {}\n\n    inputs = [\n        MessageTextInput(\n            name=\"llm_responses\",\n            display_name=\"LLM Responses\",\n            info=\"JSON ответы от LLM с операциями над апстримами\",\n            value=\"\",\n            tool_mode=True,\n        ),\n        MessageTextInput(\n            name=\"source_file\",\n            display_name=\"Source File\",\n            info=\"Путь к файлу skdpu_http_upstreams.yml\",\n            value=\"/Users/rusk/PycharmProjects/fastapi/portalFastDjango/mosru_nginx/mos_ru_nginx/skdpu_config/skdpu_http_upstreams.yml\",\n            tool_mode=False,\n        ),\n        MessageTextInput(\n            name=\"output_dir\",\n            display_name=\"Output Directory\",\n            info=\"Директория для сохранения результатов\",\n            value=\"/Users/rusk/PycharmProjects/fastapi/portalFastDjango/mosru_nginx/mos_ru_nginx/output/\",\n            tool_mode=False,\n        ),\n        MessageTextInput(\n            name=\"upstream_name\",\n            display_name=\"Upstream Name (Optional)\",\n            info=\"Имя апстрима для операции (опционально, берётся из LLM response)\",\n            value=\"\",\n            tool_mode=True,\n        ),\n        BoolInput(\n            name=\"is_final\",\n            display_name=\"Is Final Iteration\",\n            info=\"Финальная итерация — сохранить все накопленные изменения\",\n            value=False,\n        ),\n        BoolInput(\n            name=\"clear_cache\",\n            display_name=\"Clear Cache\",\n            info=\"Очистить кэш перед обработкой\",\n            value=False,\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Output\", name=\"output\", method=\"build_output\"),\n        Output(display_name=\"YAML String\", name=\"yaml_output\", method=\"get_yaml_string\"),\n        Output(display_name=\"All Changes\", name=\"all_changes\", method=\"get_all_changes\"),\n    ]\n\n    # ================== Cache Management ==================\n\n    def get_cache_key(self, file_path: str) -> str:\n        \"\"\"Генерирует ключ кэша из пути файла\"\"\"\n        return str(Path(file_path).resolve())\n\n    def get_cached_config(self, file_path: str) -> Optional[Dict[str, Any]]:\n        \"\"\"Получает конфиг из кэша\"\"\"\n        key = self.get_cache_key(file_path)\n        if key in self._config_cache:\n            return self._config_cache[key]['config']\n        return None\n\n    def cache_config(self, file_path: str, config: Dict[str, Any], changes: List[str]):\n        \"\"\"Сохраняет конфиг в кэш\"\"\"\n        key = self.get_cache_key(file_path)\n        \n        if key not in self._config_cache:\n            self._config_cache[key] = {\n                'config': config,\n                'changes': [],\n                'original_hash': self.compute_hash(config)\n            }\n        \n        self._config_cache[key]['config'] = config\n        self._config_cache[key]['changes'].extend(changes)\n\n    def get_all_cached_changes(self) -> Dict[str, List[str]]:\n        \"\"\"Возвращает все накопленные изменения\"\"\"\n        return {k: v['changes'] for k, v in self._config_cache.items()}\n\n    def clear_all_cache(self):\n        \"\"\"Очищает весь кэш\"\"\"\n        self._config_cache.clear()\n\n    def compute_hash(self, data: Any) -> str:\n        \"\"\"Вычисляет хэш данных\"\"\"\n        return hashlib.md5(json.dumps(data, sort_keys=True, default=str).encode()).hexdigest()\n\n    # ================== File Operations ==================\n\n    def load_upstreams_config(self, file_path: str) -> Dict[str, Any]:\n        \"\"\"Загружает конфиг апстримов из YAML файла\"\"\"\n        if not file_path:\n            raise ValueError(\"Путь к файлу не указан\")\n        \n        path = Path(file_path.strip())\n        if not path.exists():\n            raise FileNotFoundError(f\"Файл не найден: {file_path}\")\n\n        text = path.read_text(encoding=\"utf-8\")\n        data = yaml.safe_load(text)\n\n        if not data or not isinstance(data, dict):\n            raise ValueError(\"Некорректный YAML\")\n\n        # Ожидаем структуру: nginx_http_upstreams: { upstream_name: {...}, ... }\n        if 'nginx_http_upstreams' not in data:\n            raise ValueError(\"Отсутствует ключ 'nginx_http_upstreams' в файле\")\n\n        return data\n\n    def save_config(self, file_path: str, config: Dict[str, Any]) -> str:\n        \"\"\"Сохраняет конфиг в файл\"\"\"\n        yaml_result = yaml.dump(\n            config,\n            default_flow_style=False,\n            allow_unicode=True,\n            sort_keys=False,\n            width=4096,\n            Dumper=MyDumper,\n        )\n        \n        path = Path(file_path)\n        path.parent.mkdir(parents=True, exist_ok=True)\n        path.write_text(yaml_result, encoding='utf-8')\n        \n        return yaml_result\n\n    def get_output_path(self, source_path: str, output_dir: str) -> str:\n        \"\"\"Генерирует путь для выходного файла\"\"\"\n        source = Path(source_path)\n        out_dir = Path(output_dir) if output_dir else source.parent\n        \n        new_name = f\"{source.stem}_modified{source.suffix}\"\n        return str(out_dir / new_name)\n\n    # ================== JSON Extraction ==================\n\n    def extract_json_blocks(self, text: str) -> List[Dict[str, Any]]:\n        \"\"\"Извлекает JSON блоки из текста\"\"\"\n        if not text:\n            return []\n        \n        results: List[Dict[str, Any]] = []\n        \n        # 1. Пробуем ```json блоки\n        json_blocks = re.findall(r'```json\\s*(.*?)\\s*```', text, re.DOTALL)\n        for block in json_blocks:\n            try:\n                parsed = json.loads(block)\n                if isinstance(parsed, dict):\n                    results.append(parsed)\n                elif isinstance(parsed, list):\n                    results.extend(parsed)\n            except Exception:\n                continue\n        \n        if results:\n            return results\n        \n        # 2. Пробуем как единый JSON\n        try:\n            parsed = json.loads(text)\n            if isinstance(parsed, dict):\n                return [parsed]\n            if isinstance(parsed, list):\n                return parsed\n        except Exception:\n            pass\n        \n        # 3. Ищем JSON объекты в тексте\n        brace_depth = 0\n        current_start = None\n        \n        for i, char in enumerate(text):\n            if char == '{':\n                if brace_depth == 0:\n                    current_start = i\n                brace_depth += 1\n            elif char == '}':\n                brace_depth -= 1\n                if brace_depth == 0 and current_start is not None:\n                    json_str = text[current_start:i+1]\n                    try:\n                        results.append(json.loads(json_str))\n                    except Exception:\n                        pass\n                    current_start = None\n        \n        return results\n\n    # ================== Upstream Operations ==================\n\n    def get_upstream(self, config: Dict[str, Any], upstream_name: str) -> Optional[Dict[str, Any]]:\n        \"\"\"Получает апстрим по имени\"\"\"\n        upstreams = config.get('nginx_http_upstreams', {})\n        return upstreams.get(upstream_name)\n\n    def set_upstream(self, config: Dict[str, Any], upstream_name: str, upstream_data: Dict[str, Any]):\n        \"\"\"Устанавливает/обновляет апстрим\"\"\"\n        if 'nginx_http_upstreams' not in config:\n            config['nginx_http_upstreams'] = {}\n        config['nginx_http_upstreams'][upstream_name] = upstream_data\n\n    def delete_upstream(self, config: Dict[str, Any], upstream_name: str) -> bool:\n        \"\"\"Удаляет апстрим\"\"\"\n        upstreams = config.get('nginx_http_upstreams', {})\n        if upstream_name in upstreams:\n            del upstreams[upstream_name]\n            return True\n        return False\n\n    def normalize_server(self, server: str) -> str:\n        \"\"\"Нормализует формат сервера (добавляет порт если нет)\"\"\"\n        server = str(server).strip()\n        if ':' not in server:\n            server = f\"{server}:80\"\n        return server\n\n    def normalize_servers_list(self, servers: List[str]) -> List[str]:\n        \"\"\"Нормализует список серверов\"\"\"\n        return [self.normalize_server(s) for s in servers if s]\n\n    # ================== Operation Handlers ==================\n\n    def apply_modify_upstream(self, config: Dict[str, Any], response: Dict[str, Any]) -> List[str]:\n        \"\"\"\n        MODIFY_UPSTREAM — модификация существующего апстрима\n        \n        Поддерживает:\n        - replace_all: полная замена main и/или backup серверов\n        - add_servers: добавление серверов\n        - remove_servers: удаление серверов\n        \"\"\"\n        changes: List[str] = []\n        \n        upstream_name = response.get('upstream_name')\n        if not upstream_name:\n            return [\"❌ MODIFY_UPSTREAM: не указан upstream_name\"]\n        \n        existing = self.get_upstream(config, upstream_name)\n        if not existing:\n            return [f\"❌ Upstream '{upstream_name}' не найден\"]\n        \n        modification_type = response.get('modification_type', 'replace_all')\n        target_section = response.get('target_section', 'all')  # main, backup, all\n        \n        # Получаем updated_json из LLM response\n        updated_json = response.get('updated_json', {})\n        upstream_update = updated_json.get(upstream_name, {})\n        \n        if not upstream_update and response.get('analysis'):\n            # Строим из analysis если нет updated_json\n            analysis = response['analysis']\n            upstream_update = copy.deepcopy(existing)\n            \n            if 'main' in analysis and analysis['main'].get('new_servers'):\n                upstream_update['main'] = {'servers': analysis['main']['new_servers']}\n            if 'backup' in analysis and analysis['backup'].get('new_servers'):\n                upstream_update['backup'] = {'servers': analysis['backup']['new_servers']}\n        \n        if not upstream_update:\n            return [\"❌ MODIFY_UPSTREAM: нет данных для обновления\"]\n        \n        # Применяем изменения\n        old_upstream = copy.deepcopy(existing)\n        \n        if modification_type == 'replace_all':\n            # Полная замена секций\n            if target_section in ('main', 'all') and 'main' in upstream_update:\n                old_main = existing.get('main', {}).get('servers', [])\n                new_main = upstream_update['main'].get('servers', [])\n                existing['main'] = {'servers': self.normalize_servers_list(new_main)}\n                changes.append(f\"🔄 {upstream_name}/main: {old_main} → {new_main}\")\n            \n            if target_section in ('backup', 'all') and 'backup' in upstream_update:\n                old_backup = existing.get('backup', {}).get('servers', [])\n                new_backup = upstream_update['backup'].get('servers', [])\n                existing['backup'] = {'servers': self.normalize_servers_list(new_backup)}\n                changes.append(f\"🔄 {upstream_name}/backup: {old_backup} → {new_backup}\")\n            \n            # Обновляем метаданные если есть\n            for key in ('domains', 'environment', 'system_id'):\n                if key in upstream_update:\n                    existing[key] = upstream_update[key]\n        \n        elif modification_type == 'add_servers':\n            # Добавление серверов\n            if target_section in ('main', 'all') and 'main' in upstream_update:\n                if 'main' not in existing:\n                    existing['main'] = {'servers': []}\n                new_servers = upstream_update['main'].get('servers', [])\n                for server in new_servers:\n                    normalized = self.normalize_server(server)\n                    if normalized not in existing['main']['servers']:\n                        existing['main']['servers'].append(normalized)\n                        changes.append(f\"➕ {upstream_name}/main: добавлен {normalized}\")\n            \n            if target_section in ('backup', 'all') and 'backup' in upstream_update:\n                if 'backup' not in existing:\n                    existing['backup'] = {'servers': []}\n                new_servers = upstream_update['backup'].get('servers', [])\n                for server in new_servers:\n                    normalized = self.normalize_server(server)\n                    if normalized not in existing['backup']['servers']:\n                        existing['backup']['servers'].append(normalized)\n                        changes.append(f\"➕ {upstream_name}/backup: добавлен {normalized}\")\n        \n        elif modification_type == 'remove_servers':\n            # Удаление серверов\n            servers_to_remove = response.get('servers_to_remove', [])\n            if not servers_to_remove and 'analysis' in response:\n                # Пытаемся извлечь из diff\n                diff = response.get('diff', {})\n                if 'main' in diff:\n                    servers_to_remove.extend(diff['main'].get('old_servers', []))\n                if 'backup' in diff:\n                    servers_to_remove.extend(diff['backup'].get('old_servers', []))\n            \n            normalized_to_remove = set(self.normalize_server(s) for s in servers_to_remove)\n            \n            if target_section in ('main', 'all') and 'main' in existing:\n                old_servers = existing['main'].get('servers', [])\n                new_servers = [s for s in old_servers if self.normalize_server(s) not in normalized_to_remove]\n                removed = set(old_servers) - set(new_servers)\n                if removed:\n                    existing['main']['servers'] = new_servers\n                    changes.append(f\"🗑️ {upstream_name}/main: удалены {list(removed)}\")\n            \n            if target_section in ('backup', 'all') and 'backup' in existing:\n                old_servers = existing['backup'].get('servers', [])\n                new_servers = [s for s in old_servers if self.normalize_server(s) not in normalized_to_remove]\n                removed = set(old_servers) - set(new_servers)\n                if removed:\n                    existing['backup']['servers'] = new_servers\n                    changes.append(f\"🗑️ {upstream_name}/backup: удалены {list(removed)}\")\n        \n        # Сохраняем обновлённый апстрим\n        self.set_upstream(config, upstream_name, existing)\n        \n        if not changes:\n            changes.append(f\"ℹ️ {upstream_name}: без изменений\")\n        \n        return changes\n\n    def apply_create_upstream(self, config: Dict[str, Any], response: Dict[str, Any]) -> List[str]:\n        \"\"\"CREATE_UPSTREAM — создание нового апстрима\"\"\"\n        changes: List[str] = []\n        \n        upstream_name = response.get('upstream_name')\n        if not upstream_name:\n            return [\"❌ CREATE_UPSTREAM: не указан upstream_name\"]\n        \n        existing = self.get_upstream(config, upstream_name)\n        if existing:\n            return [f\"❌ Upstream '{upstream_name}' уже существует. Используйте MODIFY_UPSTREAM\"]\n        \n        # Получаем данные для нового апстрима\n        updated_json = response.get('updated_json', {})\n        new_upstream = updated_json.get(upstream_name, {})\n        \n        if not new_upstream:\n            # Пробуем собрать из других полей\n            new_upstream = {\n                'main': {'servers': response.get('main_servers', [])},\n                'backup': {'servers': response.get('backup_servers', [])},\n                'domains': response.get('domains', []),\n                'environment': response.get('environment', 'production'),\n                'system_id': response.get('system_id', '')\n            }\n        \n        # Нормализуем серверы\n        if 'main' in new_upstream and 'servers' in new_upstream['main']:\n            new_upstream['main']['servers'] = self.normalize_servers_list(new_upstream['main']['servers'])\n        if 'backup' in new_upstream and 'servers' in new_upstream['backup']:\n            new_upstream['backup']['servers'] = self.normalize_servers_list(new_upstream['backup']['servers'])\n        \n        # Создаём апстрим\n        self.set_upstream(config, upstream_name, new_upstream)\n        \n        changes.append(f\"✅ Создан upstream '{upstream_name}'\")\n        if new_upstream.get('main', {}).get('servers'):\n            changes.append(f\"   main: {new_upstream['main']['servers']}\")\n        if new_upstream.get('backup', {}).get('servers'):\n            changes.append(f\"   backup: {new_upstream['backup']['servers']}\")\n        \n        return changes\n\n    def apply_delete_upstream(self, config: Dict[str, Any], response: Dict[str, Any]) -> List[str]:\n        \"\"\"DELETE_UPSTREAM — удаление апстрима\"\"\"\n        changes: List[str] = []\n        \n        upstream_name = response.get('upstream_name')\n        if not upstream_name:\n            return [\"❌ DELETE_UPSTREAM: не указан upstream_name\"]\n        \n        existing = self.get_upstream(config, upstream_name)\n        if not existing:\n            return [f\"❌ Upstream '{upstream_name}' не найден\"]\n        \n        # Удаляем\n        self.delete_upstream(config, upstream_name)\n        changes.append(f\"🗑️ Удалён upstream '{upstream_name}'\")\n        \n        return changes\n\n    def apply_replace_upstream(self, config: Dict[str, Any], response: Dict[str, Any]) -> List[str]:\n        \"\"\"REPLACE_UPSTREAM — полная замена апстрима\"\"\"\n        changes: List[str] = []\n        \n        upstream_name = response.get('upstream_name')\n        if not upstream_name:\n            return [\"❌ REPLACE_UPSTREAM: не указан upstream_name\"]\n        \n        updated_json = response.get('updated_json', {})\n        new_upstream = updated_json.get(upstream_name, {})\n        \n        if not new_upstream:\n            return [\"❌ REPLACE_UPSTREAM: нет данных для замены\"]\n        \n        existing = self.get_upstream(config, upstream_name)\n        \n        # Нормализуем серверы\n        if 'main' in new_upstream and 'servers' in new_upstream['main']:\n            new_upstream['main']['servers'] = self.normalize_servers_list(new_upstream['main']['servers'])\n        if 'backup' in new_upstream and 'servers' in new_upstream['backup']:\n            new_upstream['backup']['servers'] = self.normalize_servers_list(new_upstream['backup']['servers'])\n        \n        # Заменяем\n        self.set_upstream(config, upstream_name, new_upstream)\n        \n        if existing:\n            changes.append(f\"🔄 Заменён upstream '{upstream_name}'\")\n        else:\n            changes.append(f\"✅ Создан upstream '{upstream_name}'\")\n        \n        return changes\n\n    # ================== Main Dispatcher ==================\n\n    def apply_response(self, config: Dict[str, Any], response: Dict[str, Any]) -> List[str]:\n        \"\"\"Применяет ответ LLM к конфигу\"\"\"\n        if response.get('status') not in ('success', 'partial_success'):\n            return [f\"⚠️ Пропущен: status={response.get('status')}\"]\n        \n        operation = (\n            response.get('operation_type') or\n            response.get('operation') or\n            ''\n        ).upper()\n        \n        # Маппинг операций\n        handlers = {\n            'MODIFY_UPSTREAM': self.apply_modify_upstream,\n            'UPDATE_UPSTREAM': self.apply_modify_upstream,\n            'CREATE_UPSTREAM': self.apply_create_upstream,\n            'ADD_UPSTREAM': self.apply_create_upstream,\n            'DELETE_UPSTREAM': self.apply_delete_upstream,\n            'REMOVE_UPSTREAM': self.apply_delete_upstream,\n            'REPLACE_UPSTREAM': self.apply_replace_upstream,\n        }\n        \n        handler = handlers.get(operation)\n        if handler:\n            return handler(config, response)\n        \n        # Эвристика: если есть updated_json — пробуем modify\n        if response.get('updated_json'):\n            return self.apply_modify_upstream(config, response)\n        \n        return [f\"⚠️ Неизвестная операция: {operation}\"]\n\n    # ================== Build ==================\n\n    def build_output(self) -> Data:\n        all_changes: List[str] = []\n        errors: List[str] = []\n        \n        # Очистка кэша если нужно\n        if self.clear_cache:\n            self.clear_all_cache()\n            all_changes.append(\"🔄 Кэш очищен\")\n        \n        file_path = self.source_file.strip() if self.source_file else \"\"\n        \n        if not file_path:\n            return Data(value={\n                \"error\": \"source_file не указан\",\n                \"yaml\": \"\",\n                \"changes\": all_changes,\n                \"errors\": [\"empty source_file\"],\n                \"is_final\": self.is_final,\n            })\n        \n        # Проверяем кэш\n        cached_config = self.get_cached_config(file_path)\n        \n        if cached_config:\n            config = cached_config\n        else:\n            try:\n                config = self.load_upstreams_config(file_path)\n            except Exception as e:\n                return Data(value={\n                    \"error\": str(e),\n                    \"yaml\": \"\",\n                    \"changes\": all_changes,\n                    \"errors\": [str(e)],\n                })\n        \n        # Извлекаем JSON от LLM\n        responses = self.extract_json_blocks(self.llm_responses or \"\")\n        \n        if not responses:\n            if self.is_final:\n                pass  # Финальная итерация — сохраняем что есть\n            else:\n                return Data(value={\n                    \"error\": \"No JSON in llm_responses\",\n                    \"yaml\": \"\",\n                    \"changes\": all_changes,\n                    \"errors\": [\"No JSON in llm_responses\"],\n                })\n        \n        # Применяем ответы\n        for idx, resp in enumerate(responses):\n            try:\n                # Если upstream_name указан в инпуте — используем его\n                if self.upstream_name and not resp.get('upstream_name'):\n                    resp['upstream_name'] = self.upstream_name\n                \n                changes = self.apply_response(config, resp)\n                all_changes.extend([f\"[{idx}] {c}\" for c in changes])\n            except Exception as e:\n                errors.append(f\"[{idx}] {type(e).__name__}: {e}\")\n        \n        # Сохраняем в кэш\n        self.cache_config(file_path, config, all_changes)\n        \n        # Рендерим YAML\n        yaml_result = \"\"\n        saved_to = None\n        \n        try:\n            yaml_result = yaml.dump(\n                config,\n                default_flow_style=False,\n                allow_unicode=True,\n                sort_keys=False,\n                width=4096,\n                Dumper=MyDumper\n            )\n            \n            # Сохраняем если финальная итерация\n            if self.is_final and self.output_dir:\n                output_path = self.get_output_path(file_path, self.output_dir)\n                Path(output_path).parent.mkdir(parents=True, exist_ok=True)\n                Path(output_path).write_text(yaml_result, encoding='utf-8')\n                saved_to = output_path\n                \n        except Exception as e:\n            errors.append(f\"Render/Save: {e}\")\n        \n        self._yaml_result = yaml_result\n        self._all_changes = self.get_all_cached_changes()\n        \n        self.status = f\"{'✅ FINAL' if self.is_final else '🔄'} {len(responses)} resp, {len(all_changes)} changes\"\n        \n        return Data(value={\n            \"yaml\": yaml_result,\n            \"changes\": all_changes,\n            \"errors\": errors,\n            \"responses_processed\": len(responses),\n            \"source_file\": file_path,\n            \"saved_to\": saved_to,\n            \"is_final\": self.is_final,\n            \"cached_files\": list(self._config_cache.keys()),\n            \"total_changes\": sum(len(v) for v in self._all_changes.values()) if hasattr(self, '_all_changes') else 0,\n        })\n\n    def get_yaml_string(self) -> str:\n        return getattr(self, '_yaml_result', \"\")\n\n    def get_all_changes(self) -> Data:\n        \"\"\"Возвращает все накопленные изменения\"\"\"\n        return Data(value=getattr(self, '_all_changes', {}))"
+              },
+              "is_final": {
+                "_input_type": "BoolInput",
+                "advanced": false,
+                "display_name": "Is Final Iteration",
+                "dynamic": false,
+                "info": "Финальная итерация — сохранить все накопленные изменения",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "is_final",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "llm_responses": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "LLM Responses",
+                "dynamic": false,
+                "info": "JSON ответы от LLM с операциями над апстримами",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "llm_responses",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "output_dir": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Output Directory",
+                "dynamic": false,
+                "info": "Директория для сохранения результатов",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "output_dir",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "/Users/rusk/PycharmProjects/fastapi/portalFastDjango/mosru_nginx/mos_ru_nginx/output/"
+              },
+              "source_file": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Source File",
+                "dynamic": false,
+                "info": "Путь к файлу skdpu_http_upstreams.yml",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "source_file",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "/Users/rusk/PycharmProjects/fastapi/portalFastDjango/mosru_nginx/mos_ru_nginx/skdpu_config/skdpu_http_upstreams.yml"
+              },
+              "upstream_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Upstream Name (Optional)",
+                "dynamic": false,
+                "info": "Имя апстрима для операции (опционально, берётся из LLM response)",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "upstream_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "output",
+          "showNode": true,
+          "type": "NginxUpstreamAssembler"
+        },
+        "dragging": false,
+        "id": "CustomComponent-dqFNm",
+        "measured": {
+          "height": 565,
+          "width": 320
+        },
+        "position": {
+          "x": 11332.346950613286,
+          "y": 3195.463208374547
+        },
+        "selected": true,
+        "type": "genericNode"
       }
     ],
     "viewport": {
-      "x": -4157.652044707201,
-      "y": -1223.8784418785747,
-      "zoom": 0.4750001914374433
+      "x": -4384.077243575175,
+      "y": -1331.7581539732153,
+      "zoom": 0.4809637273323879
     }
   },
   "description": "Create, Connect, Converse.",
